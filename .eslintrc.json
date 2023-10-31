@@ -1,3 +1,10 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    // warning for console.log
+    "no-console": "warn",
+    // warning for unused variables
+    "no-unused-vars": "warn",
+  }
+  
 }
