@@ -6,17 +6,21 @@ import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const meta = {
+export const defaultMeta = {
   title: "Falconiere R. Barbosa | Software Engineer | ReactJs | ReactNative",
   description:
     "Hey! I'm Falconire R. Barbosa, software Engineer specialized in frontend with ReactJs and ReactNative. Let's chat!",
 };
 
 export const metadata: Metadata = {
-  ...meta,
-
+  ...defaultMeta,
+  icons: [
+    {
+      url: "/favicon/favicon.ico",
+    },
+  ],
   openGraph: {
-    ...meta,
+    ...defaultMeta,
     images: [
       {
         url: "/images/og-image.png",
@@ -27,7 +31,7 @@ export const metadata: Metadata = {
         url: "/images/og-image.png",
         width: 1800,
         height: 1600,
-        alt: meta.title,
+        alt: defaultMeta.title,
       },
     ],
     type: "website",
@@ -52,7 +56,7 @@ export default function RootLayout({
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+          gtag('config', '${process.env.GOOGLE_ANALYTICS}');
       `}
       </Script>
     </html>
