@@ -7,7 +7,7 @@ const Page = () => (
       <h2 className="pb-4 animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-pink-400 bg-clip-text text-transparent text-5xl font-black">
         Hello! I'm Falconiere Barbosa!
         <br />
-        Welcome to me personal website!
+        Welcome to my personal website!
       </h2>
       <p className="text-xl inline-flex w-auto gap-2 text-center">
         <Link
