@@ -18,23 +18,19 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
   const pageID = params.pageID;
   const { title, description, cover } = await getPageHeaders(pageID);
+  const _title = `Blog | Falconiere R. Barbosa | ${title}`;
   return {
-    alternates: {
-      canonical: "/",
-      languages: {
-        "en-US": "/en-US",
-      },
-    },
-    title: `Blog | Falconiere R. Barbosa | ${title}`,
+    applicationName: "Blog | Falconiere R. Barbosa",
+    title: _title,
     description,
     openGraph: {
+      authors: "Falconiere R. Barbosa",
       siteName: "Falconiere R. Barbosa",
-      title: `Blog | Falconiere R. Barbosa | ${title}`,
+      title: _title,
       description,
       images: [
         {
           url: cover,
-          alt: title,
           width: 1200,
           height: 630,
         },

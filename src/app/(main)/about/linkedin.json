@@ -7,7 +7,7 @@
     "email": "hello@falconiere.io",
     "phone": "+55 62996051660",
     "url": "",
-    "summary": "I am a software developer with more than eight years of experience in web and mobile development. In the last few years, I have worked with frameworks such as ReactNative, Reactjs, and Nodejs. My expertise is frontend in mobile with a good understanding of UX / UI, but I also have a good background working as a backend developer.",
+    "summary": "Hello, I'm Falconiere R. Barbosa, a seasoned software developer boasting over eight years of dedicated experience in the dynamic realms of web and mobile development. My journey has led me through diverse technologies and frameworks, with a strong focus on React Native, React.js, and Node.js. While I've honed my skills primarily in mobile front-end development with a deep appreciation for UX/UI, my background includes substantial back-end development expertise. I'm passionate about crafting exceptional digital experiences and have a proven track record of turning ideas into reality.",
     "location": {
       "countryCode": "BR",
       "address": ""
@@ -23,36 +23,36 @@
   "work": [
     {
       "name": "Gigpro",
-      "position": "Frontend Developer | Reactjs | ReactNative",
+      "position": "Software Engineer | Reactjs | ReactNative",
       "startDate": "2021-01-31",
       "endDate": "",
       "highlights": [],
-      "summary": "Gigpro is a company that provides a service that connects nearly 10K workers, “Pros”, to over 1500+ Businesses to complete over 130K shifts.  I am currently working as a frontend developer using reactjs and react-native.\n\nTechnologies: Tailwind CSS · Next.js · Python (Programming Language) · PostgreSQL · React Native · React.js",
+      "summary": "Gigpro is a dynamic company at the forefront of the gig economy, bridging the gap between nearly 10,000 skilled professionals, known as \"Pros,\" and a network of 1,500+ businesses, facilitating the execution of over 130,000 work shifts.\n\nResponsibilities:\n\n=> Spearheaded the development and continual enhancement of innovative features, ensuring the seamless operation of the Gigpro platform.\n\n=> Created comprehensive documentation, streamlining the onboarding process for technical and non-technical stakeholders.\n\n=> Actively collaborated with cross-functional teams within the organization, leveraging expertise as a developer to foster a culture of teamwork and technical excellence.\n\nKey Technologies Utilized:\n\n=> Frontend: Leveraged Next.js and React.js to craft a user-friendly and responsive interface, enhancing the overall user experience.\n=> UI Design: Utilized Tailwind CSS to create visually appealing and modern user interfaces.\n=> Backend: Employed Python and PostgreSQL to build a robust and scalable backend infrastructure.\n=> Mobile App Development: Contributed to the development of React Native applications, extending.",
       "url": "https://www.linkedin.com/company/gigproworks/"
     },
     {
       "name": "gsquad",
-      "position": "Frontend Developer | ReactJs",
+      "position": "Software Engineer | ReactJs",
       "startDate": "2019-05-31",
       "endDate": "2021-01-31",
       "highlights": [],
-      "summary": "=> Develop frontend website architecture with ReactJs and Redux\n=> Write and maintain high and well-documented code\n=> Translate business requirements for coding and solve issues discovered throughout the software release cycle from development to production  \n\nTechnologies:  Javascript, HTML, CSS/SASS,  Reactjs, Styled-Components, Jest, docker, git",
+      "summary": "I worked for Mission as a frontend developer engineer using reactjs, styled-component, and RestAPI.\n\n=> Develop frontend website architecture with ReactJs and Redux\n=> Write and maintain high and well-documented code\n=> Translate business requirements for coding and solve issues discovered throughout the software release cycle from development to production  \n\nTechnologies:  Javascript, HTML, CSS/SASS,  Reactjs, Styled-Components, Jest, docker, git",
       "url": "https://www.linkedin.com/company/mission-dev/",
       "location": "Montreal, Canada Area"
     },
     {
       "name": "FK TECH SRL",
-      "position": "Full Stack Developer",
+      "position": "Software Engineer | Full Stack",
       "startDate": "2017-11-30",
       "endDate": "2019-04-30",
       "highlights": [],
-      "summary": "=> Developed frontend, backend and mobile apps \n=> Wrote and maintained apps high well-documented code\n=> Translating business requirements for code and solving issues discovered throughout the software release cycle from development to production  \n=> Developed CI/CD width GitLab\n\nTechnologies: JavaScript, HTML, CSS, ReactJs, React Native, PHP, NodeJs, TypeScript, Linux, MySQL, MongoDB, Python, CI/CD with Gitlab, PHPUnit, jest, Nginx, docker, GraphQl, scrum, git.",
+      "summary": "I worked as a full-stack engineer at FK TECH SRL, and I have collaborated on different projects.\n\n=> Developed frontend, backend, and mobile apps \n=> Wrote and maintained apps with highly well-documented code\n=> Translating business requirements for code and solving issues discovered throughout the software release cycle from development to production  \n=> Developed CI/CD width GitLab\n\nTechnologies: JavaScript, HTML, CSS, ReactJs, React Native, PHP, NodeJs, TypeScript, Linux, MySQL, MongoDB, Python, CI/CD with Gitlab, PHPUnit, jest, Nginx, docker, GraphQl, scrum, git.",
       "url": "https://www.linkedin.com/company/fk-tech-srl/",
       "location": "Greater Buenos Aires, Argentina"
     },
     {
       "name": "WE ARE FIERA",
-      "position": "Full Stack Developer",
+      "position": "Software Engineer | Full Stack",
       "startDate": "2016-10-31",
       "endDate": "2018-05-31",
       "highlights": [],
@@ -62,7 +62,7 @@
     },
     {
       "name": "Extendeal",
-      "position": "Full Stack Developer",
+      "position": "Software Engineer | Full Stack",
       "startDate": "2017-04-30",
       "endDate": "2017-09-30",
       "highlights": [],
@@ -72,7 +72,7 @@
     },
     {
       "name": "Thet Studio - Web design & social media",
-      "position": "Full Stack Developer",
+      "position": "Software Engineer | Full Stack",
       "startDate": "2014-09-30",
       "endDate": "2016-10-31",
       "highlights": [],

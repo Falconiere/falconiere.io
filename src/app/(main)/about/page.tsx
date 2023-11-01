@@ -22,7 +22,7 @@ const Page = () => (
     <h2 className="text-3xl pb-4">Experience</h2>
     <div className="grid gap-8">
       {work.map((job) => (
-        <div className="grid sm:grid-cols-[1fr,4fr] border-b-[1px] pb-8 border-gray-700">
+        <div className="grid sm:grid-cols-[200px,auto] gap-4 border-b-[1px] pb-8 border-gray-700">
           <div className="flex">
             <time className="text-gray-400 text-sm">
               {format(new Date(job.startDate), "MMMM yyyy")} --{`>`}{" "}
