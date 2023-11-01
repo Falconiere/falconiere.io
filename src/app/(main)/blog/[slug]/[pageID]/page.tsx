@@ -34,6 +34,8 @@ export async function generateMetadata({
         {
           url: cover,
           alt: title,
+          width: 1200,
+          height: 630,
         },
       ],
     },

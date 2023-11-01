@@ -14,9 +14,35 @@ export const defaultMeta = {
 
 export const metadata: Metadata = {
   ...defaultMeta,
+  manifest: "/favicon/manifest.json",
   icons: [
     {
       url: "/favicon/favicon.ico",
+      type: "image/x-icon",
+    },
+    {
+      url: "/favicon/android-icon-36x36.png",
+      type: "image/png",
+    },
+    {
+      url: "/favicon/android-icon-48x48.png",
+      type: "image/png",
+    },
+    {
+      url: "/favicon/android-icon-72x72.png",
+      type: "image/png",
+    },
+    {
+      url: "/favicon/android-icon-96x96.png",
+      type: "image/png",
+    },
+    {
+      url: "/favicon/android-icon-144x144.png",
+      type: "image/png",
+    },
+    {
+      url: "/favicon/android-icon-192x192.png",
+      type: "image/png",
     },
   ],
   openGraph: {
@@ -24,14 +50,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/og-image.png",
-        width: 800,
-        height: 600,
-      },
-      {
-        url: "/images/og-image.png",
-        width: 1800,
-        height: 1600,
-        alt: defaultMeta.title,
+        width: 1200,
+        height: 630,
       },
     ],
     type: "website",

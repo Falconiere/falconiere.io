@@ -11,20 +11,13 @@ const meta = {
 
 export const metadata: Metadata = {
   ...meta,
-
   openGraph: {
     ...meta,
     images: [
       {
         url: "/images/og-image.png",
-        width: 800,
-        height: 600,
-      },
-      {
-        url: "/images/og-image.png",
-        width: 1800,
-        height: 1600,
-        alt: meta.title,
+        width: 1200,
+        height: 630,
       },
     ],
     type: "website",
