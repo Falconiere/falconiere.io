@@ -51,7 +51,7 @@ const Page = async ({ params }: PageProps) => {
   return (
     <>
       <div className="post-content">
-        <h1 className="text-5xl font-bold pb-4">{title}</h1>
+        <h1 className="text-3xl font-bold pb-4">{title}</h1>
         <PostRender recordMap={recordMap} />
       </div>
       <Divider />
