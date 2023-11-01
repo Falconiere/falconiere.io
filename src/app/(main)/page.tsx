@@ -4,7 +4,7 @@ import Link from "next/link";
 const Page = () => (
   <div className="text-center h-[calc(100vh-350px)] flex flex-col justify-center">
     <div>
-      <h2 className="pb-4 animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-pink-400 bg-clip-text text-transparent text-5xl font-black">
+      <h2 className="pb-4 animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-pink-400 bg-clip-text text-transparent text-xl sm:text-5xl font-black">
         Hello! I'm Falconiere Barbosa!
         <br />
         Welcome to my personal website!

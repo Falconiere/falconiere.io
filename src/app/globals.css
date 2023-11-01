@@ -118,11 +118,9 @@ pre code *::selection,
   @apply w-fit;
   @apply px-0;
   @apply bg-gray-800;
-  @apply text-justify;
+  
 }
-.post-content .notion-text{
-  @apply text-justify;
-}
+
 .post-content .notion-header{
   @apply bg-gray-800;
   
