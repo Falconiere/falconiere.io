@@ -1,10 +1,8 @@
 import { getPage, getPageHeaders } from "@/server-actions/notion";
-
 import { Divider } from "@/ui/components/Divider";
-
 import { PostRender } from "@/domains/blog/containers/PostRender";
 import { Metadata } from "next";
-import Script from "next/script";
+import { CommentBox } from "@/domains/blog/components/CommentBox";
 
 type PageProps = {
   params: {
@@ -51,15 +49,7 @@ const Page = async ({ params }: PageProps) => {
         <PostRender recordMap={recordMap} />
       </div>
       <Divider />
-      <Script
-        src="https://utteranc.es/client.js"
-        // @ts-ignore
-        repo="falconiere/falconiere.io"
-        issue-term="pathname"
-        theme="github-dark"
-        crossorigin="anonymous"
-        async
-      />
+      <CommentBox />
     </>
   );
 };
