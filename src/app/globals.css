@@ -143,9 +143,9 @@ pre code *::selection,
 
 .utterances{
   @apply w-full;
-  @apply max-w-4xl;
+  @apply max-w-none;
 }
 .utterances-frame{
   @apply w-full;
-  @apply px-8;
+  @apply max-w-none;
 }

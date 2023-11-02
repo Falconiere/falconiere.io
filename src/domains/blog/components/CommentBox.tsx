@@ -33,9 +33,7 @@ const CommentBox = () => {
     ref.current?.appendChild(script);
   }, []);
 
-  return (
-    <div ref={ref} className="utterances-frame relative" id="comment-box" />
-  );
+  return <div ref={ref} id="comment-box" />;
 };
 
 export { CommentBox };
