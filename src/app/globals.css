@@ -140,3 +140,12 @@ pre code *::selection,
 .post-content ol.notion-numbered_list li{
   @apply my-2;
 }
+
+.utterances{
+  @apply w-full;
+  @apply max-w-4xl;
+}
+.utterances-frame{
+  @apply w-full;
+  @apply px-8;
+}
