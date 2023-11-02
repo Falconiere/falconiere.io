@@ -16,6 +16,7 @@ const PostRender = ({ recordMap }: PageProps) => (
       Code,
       Equation,
       Modal,
+      Collection: () => null,
     }}
   />
 );
