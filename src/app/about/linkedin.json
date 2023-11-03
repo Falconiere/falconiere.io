@@ -1,0 +1,345 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Falconiere R. Barbosa",
+    "label": "Software Engineer | ReactNative",
+    "image": "",
+    "email": "hello@falconiere.io",
+    "phone": "+55 62996051660",
+    "url": "",
+    "summary": "Hello, I'm Falconiere R. Barbosa, a software developer with over eight years of experience specializing in mobile development. My primary focus is crafting exceptional mobile applications with React Native. While I've honed my skills primarily in mobile front-end development with a good understanding of UX/UI, I also have a background in back-end development using Nodejs.",
+    "location": {
+      "countryCode": "BR",
+      "address": ""
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "falconiere",
+        "url": "https://www.linkedin.com/in/falconiere/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Gigpro",
+      "position": "Frontend Developer | React Native | ReactJs",
+      "startDate": "2021-01-31",
+      "endDate": "",
+      "highlights": [],
+      "summary": "[i]As a dedicated front-end developer specializing in React Native at Gigpro, I have played a pivotal role in shaping the mobile user experience and overall success of the platform. Gigpro, a prominent player in the gig economy, connects nearly 10,000 skilled professionals (\"Pros\") with a network of 1,500+ businesses, facilitating the execution of over 130,000 work shifts.[/i]\n\n[t]Key Responsibilities:[/t]\n\n[kr]Led the development and continuous improvement of innovative features in the mobile application, ensuring a seamless and engaging experience for our users. Notable contributions include onboarding, available gigs, and stripe as a payment method.[/kr]\n\n[kr]Produced comprehensive documentation to streamline the onboarding process for technical and non-technical stakeholders.[/kr]\n\n[kr]Actively fostered a culture of teamwork and technical excellence by collaborating with cross-functional teams within the organization, leveraging my expertise as a React Native developer to drive collaboration and deliver high-quality solutions.[/kr]\n\n[t]Key Technologies Utilized:[/t]\n\n[kt]Spearheaded the development of React Native applications, significantly enhancing mobile user engagement and delivering a smooth, native-like experience.[/kt]\n\n[kt]Leveraged Next.js and React.js to craft a highly user-friendly and responsive interface for the business app.[/kt]\n\n[kt]Collaborated on Git version control, utilized Fastlane for seamless deployment, and contributed to both iOS and Android platforms.[/kt]\n\n[kt]Employed Firebase for real-time notifications, TypeScript for improved code quality, and Postgres for robust data storage.[/kt]\n\nSkills: [s]React Native - React.js - Git - Fastlane - IOS - Android - Firebase - TypeScript - Postgres - Python - Bash[/s]",
+      "url": "https://www.linkedin.com/company/gigproworks/"
+    },
+    {
+      "name": "gsquad",
+      "position": "Frontend Developer | Reactjs (Client: Elevate Security)",
+      "startDate": "2019-05-31",
+      "endDate": "2021-01-31",
+      "highlights": [],
+      "summary": "[i]Mission, a private network of senior-level software engineers and product builders, is empowered by a robust insights platform and a close-knit community of peers. During my tenure at Mission, I served as a frontend developer engineer, specializing in React.js, styled-components, and RestAPI while working with Elevate Security, a cybersecurity education provider.[/i]\n\n[t]Key Responsibilities:[/t]\n\n[kr]Architected the frontend website infrastructure using React.js and Redux, crafting a highly responsive and scalable user interface that significantly improved the user experience for Elevate Security's cybersecurity education platform.[/kr]\n\n[kr]Demonstrated a commitment to writing and maintaining high-quality, well-documented code, which enhanced codebase readability and minimized technical debt for the educational service.[/r]\n\n[kr]Translated complex business requirements into practical coding solutions and efficiently resolved issues throughout the software release cycle, ensuring a smooth transition from development to production for the cybersecurity education platform.[/kr]\n\n[t]Key Technologies Utilized:[/t]\n\n[kt]React.js: Spearheaded the development of the frontend architecture, leveraging React.js and Redux to create a user-centric and high-performing website for Elevate Security's cybersecurity education service.[/kt]\n\n[kt] Styled-components: Employed styled-components to maintain a consistent and visually appealing design throughout the platform.[/kt]\n\n[kt]Collaborated with Git version control.[/kt]\n[kt]TypeScript for improved codebase maintainability.[/kt]\n\nSkills: [s]React.js - Git - TypeScript - Postgres - Python - Bash[/s]",
+      "url": "https://www.linkedin.com/company/mission-dev/"
+    },
+    {
+      "name": "FK TECH SRL",
+      "position": "Full Stack Developer | VueJS | Laravel",
+      "startDate": "2017-11-30",
+      "endDate": "2019-05-31",
+      "highlights": [],
+      "summary": "[i]FK TECH SRL, a prominent software factory based in Argentina, was the backdrop of my role as a full-stack developer. During my time at FK TECH SRL, I actively contributed to various projects, showcasing my versatile skills with a strong focus on PHP, Laravel, and Vue.js.[/i]\n\n[t]Key Responsibilities:[/t]\n\n[kr]Played a pivotal role in the development of full-stack solutions, including frontend, backend, and mobile applications, with a specialization in PHP, Laravel, and Vue.js, ensuring the successful delivery of versatile software solutions.[/kr]\n\n[kr]Maintained a strong commitment to writing clean, well-documented code, promoting codebase readability and long-term maintainability for applications across different projects.[/kr]\n\n[kr]Translated complex business requirements into practical, efficient coding solutions and effectively resolved issues discovered throughout the software release cycle, guaranteeing smooth transitions from development to production.[/kr]\n\n[kr]Spearheaded the implementation of a Continuous Integration/Continuous Deployment (CI/CD) pipeline using GitLab, streamlining the development, testing, and deployment process, resulting in increased efficiency and reliability.[/kr]\n\n[t]Key Technologies Utilized:[/t]\n\n[kt]Utilized PHP for backend development, leveraging its power to create robust and scalable server-side solutions.[/kt]\n\n[kt]Specialized in the Laravel PHP framework to build efficient and secure web applications and APIs.[/kt]\n\n[kt]Played a key role in crafting dynamic and responsive user interfaces with Vue.js, enhancing the overall user experience.[/kt]\n\n[kt]Implemented and managed a CI/CD pipeline using GitLab, ensuring efficient development, testing, and deployment processes.[/kt]\n\nSkills: [s]PHP - Laravel- Git - GitLab - VueJs[/s]",
+      "url": "https://www.linkedin.com/company/fk-tech-srl/",
+      "location": "Greater Buenos Aires, Argentina"
+    },
+    {
+      "name": "Extendeal",
+      "position": "Frontend Developer (Vuejs/Php Laravel)",
+      "startDate": "2016-10-31",
+      "endDate": "2017-11-30",
+      "highlights": [],
+      "summary": "[i]Extendeal, a leading healthtech vertical SaaS provider, offers intelligent purchasing solutions for the pharmaceutical industry and has become the one-stop shop for pharmacies. During my tenure at Extendeal, I served as a Frontend Developer, making significant contributions to the product's evolution.[/i]\n\n[t]Key Responsibilities:[/t]\n\n[kr]Led the development of frontend solutions for Extendeal's healthtech vertical SaaS, utilizing Vue.js in the first product version and transitioning to React.js in the second version. Focused primarily on UI/UX enhancements and occasionally addressed backend issues using PHP with Laravel.[/kr]\n\n[kr]Maintained a steadfast commitment to producing clean, well-documented code, which enhanced codebase readability and long-term maintainability, ensuring a seamless user experience.[/kr]\n\n[kr]Translated intricate business requirements into practical, efficient coding solutions, resolving issues discovered throughout the software release cycle, thereby facilitating smooth transitions from development to production.[/kr]\n\n[t]Key Technologies Utilized:[t]\n\n[kt]Played a crucial role in crafting dynamic and responsive user interfaces using Vue.js, ultimately enhancing the overall user experience.[/kt]\n\n[kt]Transitioned to React.js for the second product version, contributing to the evolution of the product's frontend.[/kt]\n\n[kt]PHP with Laravel: Addressed backend challenges as needed, ensuring seamless integration between the frontend and backend components.[/kt]\n\n[kt]Spearheaded the implementation and management of a CI/CD pipeline with GitLab to streamline development, testing, and deployment processes, resulting in increased efficiency and reliability.[/kt]\n\nSkills: [s]Javascript - Vuejs - Riotjs - Reactjs - HTML - CSS - Linux - Mysq -  MongoD - git[/s]",
+      "url": "https://www.linkedin.com/company/extendeal/",
+      "location": "Gran Buenos Aires, Argentina"
+    },
+    {
+      "name": "Thet Studio - Web design & social media",
+      "position": "Frontend Developer ",
+      "startDate": "2014-09-30",
+      "endDate": "2016-10-31",
+      "highlights": [],
+      "summary": "[i]During my tenure at ThetStudio, I served as a Frontend Developer, specializing in building intricate and visually perfect interfaces for a range of projects, including ad banners, institutional websites, and e-commerce sites. My responsibilities extended to crafting mobile applications, using both cross-platform tools like Ionic and native development with Swift and Android.[/i]\n\n[t]Key Responsibilities:[/t]\n\n[kr]Led the development of diverse interfaces with a keen focus on pixel-perfect design for ad banners, institutional web platforms, and e-commerce sites.[/kr]\n\n[kr]Undertook the development of mobile applications, utilizing cross-platform tools like Ionic for efficient cross-device compatibility and, at times, natively building apps with Swift (iOS) and Android (Java), ensuring a seamless mobile experience. [/kr]\n\n[kr]Maintained an unwavering commitment to delivering high-quality code and design, promoting user-centric and visually appealing web and mobile experiences.[/kr]\n\n[t]Key Technologies Utilized:[/t]\n\n[kt]Leveraged the power of Angular for building dynamic and interactive web interfaces.[/kt]\n\n[kt]Utilized Ionic for cross-platform mobile app development, enhancing the reach of mobile solutions.[/kt] \n\n[kt]Developed native iOS applications with Swift, ensuring an optimal user experience on Apple devices.[/kt]\n\n[kt]Natively crafted Android applications using Java for optimal performance on Android devices.[/kt]\n\n[kt]CSS, HTML, Sass, BootStrap: Employed these technologies for efficient and visually appealing front-end development.[/kt]\n\n[kt]Cordova, Onsen UI: Utilized Cordova and Onsen UI for cross-platform mobile app development.[/kt]\n\nSkills: [s]Javascript - HTML - CSS - Linux - Mysq -  MongoD - git - Android - IOS - Mobile Development [/s]",
+      "url": "https://www.linkedin.com/company/thet-studio---web-design-&-social-media/",
+      "location": "Buenos Aires, Argentina"
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Gobierno de la Ciudad de Buenos Aires",
+      "position": "Programador",
+      "startDate": "2015-06-30",
+      "endDate": "",
+      "summary": "Participé del  BA Hackton 2015 (en Buenos Aires Argentina) como programador voluntário.\nlink do evento: https://hackdash.org/dashboards/bahktn2015",
+      "highlights": [],
+      "url": ""
+    }
+  ],
+  "education": [
+    {
+      "institution": "Faculdades Integradas IESGO",
+      "area": "Administração e Negócios",
+      "studyType": "Bacharelado em Administração",
+      "startDate": "2011-12-31",
+      "endDate": "2013-12-31",
+      "score": "8.5",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "certificates": [
+    {
+      "name": "JavaScript (Basic)",
+      "issuer": "HackerRank",
+      "startDate": "2022-11-30",
+      "url": "https://www.hackerrank.com/certificates/1220a6c0accc"
+    },
+    {
+      "name": "JavaScript (Intermediate) Certificate",
+      "issuer": "HackerRank",
+      "startDate": "2022-11-30",
+      "url": "https://www.hackerrank.com/certificates/50a49509f3ce"
+    },
+    {
+      "name": "Fundamentals of software architecture",
+      "issuer": "Platzi",
+      "startDate": "2018-01-31",
+      "url": "https://platzi.com/@falconiere/curso/1247-arquitectura-software/diploma/detalle/"
+    },
+    {
+      "name": "Professional course in software architecture",
+      "issuer": "Platzi",
+      "startDate": "2018-01-31",
+      "url": "https://platzi.com/@falconiere/curso/1248-pro-arquitectura/diploma/detalle/"
+    }
+  ],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Software Development",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Tailwind CSS",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Next.js",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Mobile Application Development",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Python (Programming Language)",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "PostgreSQL",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "React Native",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Web Development",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Xamarin",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "HTML5",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "CSS",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "JavaScript",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "PHP",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "MySQL",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Node.js",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "MongoDB",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Android",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Java",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "JSON",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Git",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Cascading Style Sheets (CSS)",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "REST",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "React.js",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "TypeScript",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Software Architecture",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Inglês",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": " Linux",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Linux Server",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "C#",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Vuejs",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Node",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Swift",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Redux.js",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "AdonisJs",
+      "level": "",
+      "keywords": []
+    }
+  ],
+  "languages": [
+    {
+      "language": "pt",
+      "fluency": "Native Speaker"
+    },
+    {
+      "fluency": "Native Speaker",
+      "language": "Espanhol"
+    },
+    {
+      "fluency": "Limited Working",
+      "language": "French"
+    },
+    {
+      "fluency": "Full Professional",
+      "language": "Inglês"
+    },
+    {
+      "fluency": "Native Speaker",
+      "language": "Português"
+    }
+  ],
+  "interests": [],
+  "references": [
+    {
+      "name": "Filipe Colaquecez",
+      "reference": "Falconiere epitomizes dedication and professionalism in every aspect of his work. Diligent, hardworking, and truly adept in his field, he possesses extensive expertise across multiple domains. As a remarkably comprehensive professional, Falconiere consistently extends his support to the entire team, displaying an unwavering commitment to his responsibilities. His deliverables are marked by a blend of quality and efficiency, consistently meeting requirements with precision and swiftness. Without a shadow of a doubt, I wholeheartedly endorse Falconiere as both a skilled technician and an exceptional individual."
+    },
+    {
+      "name": "Matias Romano",
+      "reference": "Tuve la suerte de conocer a Falconiere en mi gestión en Extendeal, Como desarrollador Front y Backend tuvo la difícil tarea de hacer que los diseños llegaran a la experiencia web de nuestros clientes. Y puedo decir que se traspiro bastante. \"Falco\" es una persona muy aplicada detallista con gran responsabilidad y orden, \nLo recomiendo y espero sepan valorar su capacidades. "
+    },
+    {
+      "name": "Cristian Mari",
+      "reference": "Falco es un programador como se debe, respetuoso con argumentos solidos, su seguimiento ayuda compañerismo son gigantes igualados a sus conocimientos en la tecnologias actuales y venideras,\ntiene un amor por el codigo y el aprendisaje poco visto como colega muy agradecido de haber podido trabajar a su lado discutir y aprender :)"
+    },
+    {
+      "name": "Carlos Alvarez Lopez",
+      "reference": "He trabajado con Falconiere en varios proyectos, es la clase de persona con quien deseas trabajar, conoces ampliamente sobre buenas practicas y arquitectura, siempre esta abierto a sugerencias y modificaciones, además, cuenta con la facilidad de darse entender, es muy bueno enseñando a los demás y transmitiendo lo que hace. Sin duda, un gran profesional."
+    },
+    {
+      "name": "Roberto Zamora, Web UI Developer",
+      "reference": "Agradezco mucho la oportunidad de haber trabajado con Falconiere, es excelente desarrollador y aún mejor como persona, responsable, inteligente, apasionado. Tiene grandes conocimientos técnicos sobre desarrollo, y una facilidad de aprendizaje en nuevas tecnologías con una rapidez tremenda. Es un gran Team Leader, sabe manejar los tiempos y los recursos de un equipo. Admiro mucho su responsabilidad y calidad humana. Recomendadisimo!!"
+    }
+  ],
+  "projects": [],
+  "meta": {
+    "version": "v1.0.0",
+    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
+  }
+}

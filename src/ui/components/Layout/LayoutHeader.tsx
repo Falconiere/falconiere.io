@@ -8,11 +8,13 @@ const LayoutHeader = () => (
         <Image
           src={avatar}
           alt="Falconiere Avatar"
-          className="block h-10 w-10 rounded-full ring-2 ring-white mx-auto"
+          className="block h-8 sm:h-10 w-8 sm:w-10 rounded-full ring-2 ring-white mx-auto"
         />
-        <div>
-          <h2>Falconiere Barbosa</h2>
-          <span className="text-pink-500">Senior Software Engineer</span>
+        <div className="leading-[12px]">
+          <h2 className="text-sm sm:text-lg">Falconiere Barbosa</h2>
+          <span className="text-[14px] sm:text-lg text-pink-500">
+            Senior Software Engineer
+          </span>
         </div>
       </Link>
       <nav>

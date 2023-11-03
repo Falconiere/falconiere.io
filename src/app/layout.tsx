@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+// core styles shared by all of react-notion-x (required)
+import "react-notion-x/src/styles.css";
+
+// used for code syntax highlighting (optional)
+import "prismjs/themes/prism-tomorrow.css";
 
 import "./globals.css";
 import Script from "next/script";
+import { Layout } from "@/ui/components/Layout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -65,7 +71,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Layout>{children}</Layout>
+      </body>
       <Script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-SK3M5D79VS"
