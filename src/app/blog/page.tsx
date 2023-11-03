@@ -7,6 +7,10 @@ const meta = {
   title: "Blog | Falconiere R. Barbosa",
   description:
     "Hey! Here is my blog, where I share my thoughts about software development, tech, and life.",
+  authors: {
+    name: "Falconiere R. Barbosa",
+    url: "https://falconiere.io/",
+  },
 };
 
 export const metadata: Metadata = {

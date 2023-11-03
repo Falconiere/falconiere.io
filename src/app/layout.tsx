@@ -17,6 +17,10 @@ export const defaultMeta = {
     "Falconiere R. Barbosa | Software Engineer | ReactNative | ReactJs | NodeJs",
   description:
     "Hey! I'm Falconire R. Barbosa, software engineer specialized in frontend with ReactJs and ReactNative. Let's chat!",
+  authors: {
+    name: "Falconiere R. Barbosa",
+    url: "https://falconiere.io/",
+  },
 };
 
 export const metadata: Metadata = {

@@ -19,6 +19,10 @@ export async function generateMetadata({
   const _title = `Blog | Falconiere R. Barbosa | ${title}`;
   return {
     applicationName: "Blog | Falconiere R. Barbosa",
+    authors: {
+      name: "Falconiere R. Barbosa",
+      url: "https://falconiere.io/blog",
+    },
     title: _title,
     description,
     openGraph: {
