@@ -35,6 +35,14 @@ const LayoutHeader = () => (
               Blog
             </Link>
           </li>
+          <li>
+            <Link
+              href="/projects"
+              className="text-pink-500 dark:hover:text-pink-400"
+            >
+              Projects
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>
