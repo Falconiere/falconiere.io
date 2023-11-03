@@ -53,6 +53,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     ...defaultMeta,
+    authors: "Falconiere R. Barbosa",
+    siteName: "Falconiere R. Barbosa",
     images: [
       {
         url: "/images/og-image.png",
@@ -60,7 +62,6 @@ export const metadata: Metadata = {
         height: 630,
       },
     ],
-    type: "website",
   },
 };
 
