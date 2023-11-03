@@ -13,9 +13,10 @@ import { Layout } from "@/ui/components/Layout";
 const inter = Inter({ subsets: ["latin"] });
 
 export const defaultMeta = {
-  title: "Falconiere R. Barbosa | Software Engineer | ReactJs | ReactNative",
+  title:
+    "Falconiere R. Barbosa | Software Engineer | ReactNative | ReactJs | NodeJs",
   description:
-    "Hey! I'm Falconire R. Barbosa, software Engineer specialized in frontend with ReactJs and ReactNative. Let's chat!",
+    "Hey! I'm Falconire R. Barbosa, software engineer specialized in frontend with ReactJs and ReactNative. Let's chat!",
 };
 
 export const metadata: Metadata = {
