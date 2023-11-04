@@ -106,7 +106,7 @@ pre code *::selection,
   @apply my-4;
   @apply font-thin;
   @apply text-gray-50;
-  @apply text-justify
+ 
 }
 .post-content .title{
   @apply text-4xl;
@@ -118,7 +118,7 @@ pre code *::selection,
   @apply w-fit;
   @apply px-0;
   @apply bg-gray-800;
-  
+  @apply text-justify
 }
 
 .post-content .notion-header{
@@ -128,6 +128,7 @@ pre code *::selection,
 
 .post-content p{
   @apply my-4;
+  
 }
 
 /* Add bollets, and align to left */
