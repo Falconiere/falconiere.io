@@ -2,7 +2,7 @@
 
 import { submitWelcomeEmailForNewsLetterSignup } from "@/server-actions/email";
 import { isValidateEmail } from "@/utils/email";
-import { useRef, useState } from "react";
+import { useState } from "react";
 const errorOnSignUp =
   "Your e-mail address is invalid or you are already subscribed!";
 
