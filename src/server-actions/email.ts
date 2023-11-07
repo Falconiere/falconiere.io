@@ -1,13 +1,10 @@
 "use server"
 import { Resend } from 'resend';
 import { saveEmailFromNewsLetterSignup } from './supabase';
-import { join } from 'path';
-import { readFileSync } from 'fs';
-import getConfig from 'next/config';
-const { serverRuntimeConfig } = getConfig()
-const getHtmlPath = (dir: string) => join(serverRuntimeConfig.PROJECT_ROOT, dir);
+import { promises as fs } from 'fs';
+
 const submitWelcomeEmailForNewsLetterSignup = async (email: string) => {
-  const html = readFileSync(getHtmlPath('email/templates/welcome.html'), 'utf8');
+  const html = await fs.readFile(process.cwd() + 'src/app/email/templates/welcome.html', 'utf8');
   await saveEmailFromNewsLetterSignup(email);
   const resend = new Resend(process.env.RESEND_API_KEY);
   await resend.emails.send({
