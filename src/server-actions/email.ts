@@ -5,8 +5,6 @@ import { join } from 'path';
 import { readFileSync } from 'fs';
 
 const getHtmlPath = (dir: string) => join(process.cwd(), dir);
-
-
 const submitWelcomeEmailForNewsLetterSignup = async (email: string) => {
   await saveEmailFromNewsLetterSignup(email);
   const html = readFileSync(getHtmlPath('src/email/templates/welcome.html'), 'utf8');
