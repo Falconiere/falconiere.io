@@ -17,8 +17,7 @@ const NewsletterForm = () => {
       await submitWelcomeEmailForNewsLetterSignup(email as string);
       setEmail("");
       setHasSubscribed(true);
-    } catch (error) {
-      console.log({ error });
+    } catch {
       setError(errorOnSignUp);
     }
     setIsSubmitting(false);
