@@ -31,7 +31,8 @@ const NewsletterForm = () => {
     );
   };
 
-  const isDisabled = !email || !isValidateEmail(email) || isSubmitting;
+  const isDisabled =
+    !email || (email && !isValidateEmail(email)) || isSubmitting;
 
   return (
     <form className="flex flex-col gap-2 w-full max-w-[500px]">
@@ -45,7 +46,6 @@ const NewsletterForm = () => {
               placeholder={
                 !hasSubscribed ? "Enter your email" : "You're subscribed !  🎉"
               }
-              readOnly={hasSubscribed}
               name="email"
               type="email"
               className="bg-gray-800 border-pink-500 dark:focus:border-pink-400 border-2 rounded p-2 outline-none w-full"
