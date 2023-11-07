@@ -3,8 +3,9 @@ import { Resend } from 'resend';
 import { saveEmailFromNewsLetterSignup } from './supabase';
 import { join } from 'path';
 import { readFileSync } from 'fs';
-
-const getHtmlPath = (dir: string) => join(process.cwd(), dir);
+import getConfig from 'next/config';
+const { serverRuntimeConfig } = getConfig()
+const getHtmlPath = (dir: string) => join(serverRuntimeConfig.PROJECT_ROOT, dir);
 const submitWelcomeEmailForNewsLetterSignup = async (email: string) => {
   const html = readFileSync(getHtmlPath('src/email/templates/welcome.html'), 'utf8');
   await saveEmailFromNewsLetterSignup(email);

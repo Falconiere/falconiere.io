@@ -25,12 +25,12 @@ module.exports = {
         use: 'raw-loader',
       }
     )
-
     // Modify the file loader rule to ignore *.svg, since we have it handled now.
     fileLoaderRule.exclude = /\.svg$/i
 
     return config
   },
-
-  // ...other config
+  serverRuntimeConfig: {
+    PROJECT_ROOT: __dirname
+  }
 }
