@@ -118,7 +118,7 @@ pre code *::selection,
   @apply w-fit;
   @apply px-0;
   @apply bg-gray-800;
-  @apply text-justify
+  @apply sm:text-justify
 }
 
 .post-content .notion-header{
