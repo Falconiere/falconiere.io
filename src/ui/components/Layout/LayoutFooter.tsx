@@ -1,8 +1,10 @@
 "use client";
 import { allLinks } from "@/data/sociallinks";
+import { NewsletterForm } from "../NewsletterForm";
 
 const LayoutFooter = () => (
-  <footer className="grid gap-4 items-center justify-center text-center p-10">
+  <footer className="flex flex-col gap-4 items-center justify-center text-center px-10 w-full max-w-4xl mx-auto">
+    <NewsletterForm />
     <div className="flex gap-4 text-center items-center justify-center">
       {allLinks.map(({ Icon, ...link }) => (
         <a
