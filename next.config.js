@@ -20,6 +20,10 @@ module.exports = {
         resourceQuery: { not: /url/ }, // exclude if *.svg?url
         use: ['@svgr/webpack'],
       },
+      {
+        test: /\.html$/,
+        use: 'raw-loader',
+      }
     )
 
     // Modify the file loader rule to ignore *.svg, since we have it handled now.
