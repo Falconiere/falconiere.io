@@ -3,7 +3,7 @@ import { allLinks } from "@/data/sociallinks";
 import { NewsletterForm } from "../NewsletterForm";
 
 const LayoutFooter = () => (
-  <footer className="flex flex-col gap-4 items-center justify-center text-center px-10 w-full max-w-4xl mx-auto">
+  <footer className="flex flex-col gap-4 items-center justify-center text-center px-10 pb-10 w-full max-w-4xl mx-auto">
     <NewsletterForm />
     <div className="flex gap-4 text-center items-center justify-center">
       {allLinks.map(({ Icon, ...link }) => (
