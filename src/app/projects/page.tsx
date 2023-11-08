@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 };
 
 const Page = () => (
-  <div className="flex items-center justify-center min-h-[60vh]">
+  <div className="flex items-center justify-center min-h-[55vh]">
     <h2 className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-pink-400 bg-clip-text text-transparent text-2xl sm:text-4xl font-bold">
       Projects coming soon...
     </h2>
