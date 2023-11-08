@@ -2,6 +2,7 @@
 import { Resend } from 'resend';
 import { saveEmailFromNewsLetterSignup } from './supabase';
 import welcome from '@/templates/welcome';
+
 const submitWelcomeEmailForNewsLetterSignup = async (email: string) => {
   await saveEmailFromNewsLetterSignup(email);
   const resend = new Resend(process.env.RESEND_API_KEY);

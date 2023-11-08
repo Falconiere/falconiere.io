@@ -15,7 +15,7 @@ type PostCardProps = {
 const PostCard = ({ description, title, id, publishedAt }: PostCardProps) => (
   <article className="border-t-[1px] pt-8 pb-2 sm:pb-4 grid sm:grid-cols-[150px,auto] gap-4 sm:gap-8 border-gray-700">
     {publishedAt ? (
-      <time className="text-gray-510 dark:text-gray-400 text-sm">
+      <time className="text-gray-500 dark:text-gray-400 text-sm">
         {format(new Date(`${publishedAt} EDT`), "MMMM dd, yyyy")}
       </time>
     ) : null}
