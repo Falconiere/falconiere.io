@@ -9,7 +9,7 @@ const meta = {
     "Hey! Here is my blog, where I share my thoughts about software development, tech, and life.",
   authors: {
     name: "Falconiere R. Barbosa",
-    url: "https://falconiere.io/",
+    url: "https://falconiere.io",
   },
 };
 
@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   ...meta,
   openGraph: {
     ...meta,
+    url: "https://falconiere.io/blog",
     images: [
       {
         url: "/images/og-image.png",

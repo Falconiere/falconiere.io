@@ -26,6 +26,7 @@ export const defaultMeta = {
 export const metadata: Metadata = {
   ...defaultMeta,
   manifest: "/favicon/manifest.json",
+
   icons: [
     {
       url: "/favicon/favicon.ico",
@@ -60,6 +61,7 @@ export const metadata: Metadata = {
     ...defaultMeta,
     authors: "Falconiere R. Barbosa",
     siteName: "Falconiere R. Barbosa",
+    url: "https://falconiere.io",
     images: [
       {
         url: "/images/og-image.png",
