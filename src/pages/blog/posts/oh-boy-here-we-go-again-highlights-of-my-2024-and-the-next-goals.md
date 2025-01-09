@@ -14,8 +14,7 @@ My daughter was born in July precisely. I never imagined how being a father woul
 #### Work and side-projects
 The other good thing is that in 2024, I also fell in love with my profession. I was unmotivated and without direction, but I found my way and greatly enjoyed my job again! Thank you, my teammates. 
 
-Also, I finally launched a project ([codafolks](https://codafolks.com){target='blank'}, which is still in progress), started building more projects, and learned a lot. These projects were not just about work; they were about my passion. I poured my heart and soul into them, and the satisfaction I got from seeing them come to life was unparalleled. That feels so good.  
-
+Also, I finally launched a project (<a href="https://codafolks.com" target="_blank">codafolks</a>, which is still in progress), started building more projects, and learned a lot. These projects were not just about work; they were about my passion. I poured my heart and soul into them, and the satisfaction I got from seeing them come to life was unparalleled. That feels so good.  
 #### Knout Depression 
 Well, not everything was entirely good, you guys don't know, but I was fighting against depression for so long (about 15 years, precisely), and I thought I would never win. Yup, this is a little dark subject of my life. But now, I feel confident about sharing with everyone because I am finally cured, at least temporarily. 
 
