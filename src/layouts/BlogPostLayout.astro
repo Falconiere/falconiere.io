@@ -1,0 +1,17 @@
+---
+import "@/styles/tailwind.css";
+import Body from "@/components/Body.astro";
+import Head from "@/components/Head.astro";
+const { id } = Astro.params;
+if (id === undefined) {
+  return Astro.redirect("/404");
+}
+---
+
+<!doctype html>
+<html lang="en">
+  <Head />
+  <Body>
+    <slot />
+  </Body>
+</html>

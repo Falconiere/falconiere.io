@@ -1,8 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-const posts = Object.values(
-	import.meta.glob("./blog/posts/*.md", { eager: true }),
-) as Array<{ frontmatter: { title: string }; url: string }>;
+import { getCollection } from "astro:content";
+const posts = await getCollection("blog");
 ---
 
 <Layout>
@@ -10,7 +9,7 @@ const posts = Object.values(
 	{
 		posts.map((post) => (
 			<li>
-				<a href={post.url}>{post.frontmatter.title}</a>
+				<a href={`/blog/posts/${post.id}`}>{post.data.title}</a>
 			</li>
 		))
 	}
