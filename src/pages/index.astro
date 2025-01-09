@@ -1,10 +1,16 @@
 ---
-import { getPosts } from '../api/getPosts';
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-const posts  = await getPosts();
+import Layout from "../layouts/Layout.astro";
+const posts = Object.values(
+	import.meta.glob("./blog/posts/*.md", { eager: true }),
+) as Array<{ frontmatter: { title: string }; url: string }>;
 ---
 
 <Layout>
-	<Welcome />
+	{
+		posts.map((post) => (
+			<li>
+				<a href={post.url}>{post.frontmatter.title}</a>
+			</li>
+		))
+	}
 </Layout>
