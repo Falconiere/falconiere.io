@@ -1,5 +1,5 @@
 ---
-layout: " ../../../layouts/PostLayout.astro"
+layout: ../../../layouts/PostLayout.astro
 title: Oh boy! Here we go again! Highlights of my 2024 and the next goals.
 image: Space Poster Vector.jpg
 description: In 2024, I failed again on my New Year's resolutions, like getting rich or hitting the gym (even though I worked out a lot ), but I accomplished a few things. Let's get started.
