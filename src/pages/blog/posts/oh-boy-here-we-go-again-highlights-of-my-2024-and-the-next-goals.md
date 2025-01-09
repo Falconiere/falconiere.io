@@ -1,14 +1,13 @@
 ---
 layout: ../../../layouts/PostLayout.astro
 title: Oh boy! Here we go again! Highlights of my 2024 and the next goals.
-image: Space Poster Vector.jpg
+cover: Space Poster Vector.jpg
+coverAlt: Space poster astronaut
 description: In 2024, I failed again on my New Year's resolutions, like getting rich or hitting the gym (even though I worked out a lot ), but I accomplished a few things. Let's get started.
 author: Falconiere Barbosa
 publishedAt: 2025-01-10
 ---
-![[Space Poster Vector.jpg]]
 ![Space Poster Vector.jpg](../../../assets/images/Space Poster Vector.jpg)
-
 In 2024, I failed again on my New Year's resolutions, like getting rich or hitting the gym (even though I worked out a lot ), but I accomplished a few things. Let's get started. 
 #### My daughter
 My daughter was born in July precisely. I never imagined how being a father would change my life in many ways. It's hard to describe the feeling I have every day. It's like falling in love again and again with the same little one. It made me stronger, more responsible, and happier.  Oh boy, the best feeling ever. 
