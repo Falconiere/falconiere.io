@@ -6,9 +6,11 @@ const blog = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    pubDate: z.coerce.date(),
-    updatedDate: z.coerce.date().optional(),
-    layout: z.string()
+    cover: z.string(),
+    coverAlt: z.string(),
+    layout: z.string(),
+    publishedAt: z.coerce.date(),
   }),
 });
+
 export const collections = { blog };
