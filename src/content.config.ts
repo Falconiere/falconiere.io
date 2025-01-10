@@ -7,11 +7,11 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string(),
     author: z.string(),
-    cover: z.string().default("Astronaut-Headshot-Closeup.jpg"),
+    cover: z.string().default("Astronaut-Headshot-Closeup.jpeg"),
     coverAlt: z.string(),
-    publishedAt: z.coerce.date().transform((date) => date.toISOString()),
+    date: z.coerce.date(),
     draft: z.boolean(),
-    tags: z.array(z.string()).optional(),
+    tags: z.array(z.string()).nullable(),
   }),
 });
 
