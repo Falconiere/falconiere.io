@@ -1,12 +1,17 @@
 ---
-title: Oh boy! Here we go again! Highlights of my 2024 and the next goals.
+title: Oh boy! Here we go again! Highlights of my 2024 and the next goals
 cover: Space-Poster-Vector.jpg
 coverAlt: Space poster astronaut
 description: In 2024, I failed again on my New Year's resolutions, like getting rich or hitting the gym (even though I worked out a lot ), but I accomplished a few things. Let's get started.
 author: Falconiere Barbosa
-publishedAt: 2025-01-10
 draft: false
+date: 2025-01-09
+tags:
+  - highlights
+  - new
+  - goals
 ---
+
 ![Astronaut-Headshot-Closeup.jpg](../assets/images/Astronaut-Headshot-Closeup.jpg)
 In 2024, I failed again on my New Year's resolutions, like getting rich or hitting the gym (even though I worked out a lot ), but I accomplished a few things. Let's get started. 
 #### My daughter
