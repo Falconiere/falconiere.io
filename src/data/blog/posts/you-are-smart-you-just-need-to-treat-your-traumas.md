@@ -1,6 +1,6 @@
 ---
 title: You are smart! You just need to treat your traumas
-cover: Astronaut-Headshot-Closeup.jpg
+cover: Astronaut-Headshot-Closeup.jpeg
 coverAlt: Space poster astronaut
 description: Here is the short description
 author: Falconiere Barbosa

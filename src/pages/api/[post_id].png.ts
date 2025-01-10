@@ -1,6 +1,3 @@
-
-import { OpenGraphImage } from "@/components/OpenGraphImage";
-import { defaultMetaDescription } from "@/data/site/defaultMetaDescription";
 import { generateOGImage } from "@/utils/generateOGImage";
 import type { APIRoute } from "astro";
 import { getCollection, getEntry } from "astro:content";
