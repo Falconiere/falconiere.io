@@ -2,6 +2,7 @@
 import "@/styles/tailwind.css";
 import Body from "@/components/Body.astro";
 import Head from "@/components/Head.astro";
+import PostComments from "@/components/PostComments.astro";
 const { id } = Astro.params;
 if (id === undefined) {
   return Astro.redirect("/404");
@@ -12,6 +13,9 @@ if (id === undefined) {
 <html lang="en">
   <Head />
   <Body>
-    <slot />
+    <article class="mx-auto">
+      <slot />
+    </article>
+    <PostComments />
   </Body>
 </html>
