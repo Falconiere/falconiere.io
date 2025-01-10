@@ -27,7 +27,7 @@ const buildRandomLinearGradientCssTwoColors = () => {
 }
 
 const getLocalImageToBase64 = async (image: string) => {
-  const pathImage = `./src/data/blog/images/${image}`;
+  const pathImage = `./src/data/blog/assets/images/${image}`;
   const imageBuffer = await fs.readFile(pathImage);
   let ext = path.extname(image).slice(1);
   if (ext === "jpg") {
