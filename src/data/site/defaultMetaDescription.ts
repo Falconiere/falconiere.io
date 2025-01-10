@@ -5,6 +5,6 @@ I'm a software engineer, a devoted husband, proud father of Ágatha, passionate 
 Here you can find some of my thoughts, projects, and experiences. Enjoy!
 `,
   summary: "I'm a software engineer, a devoted husband, proud father of Ágatha, passionate about technology, science, music and a lifelong learner.",
-  image: "Astronaut-Headshot-Closeup.jpg",
+  image: "Astronaut-Headshot-Closeup.jpeg",
   author: "Falconiere Barbosa",
 }
