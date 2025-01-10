@@ -1,9 +1,10 @@
+import { defaultMetaDescription } from "@/data/site/defaultMetaDescription";
 import { getEntry } from "astro:content";
 
 export const getHeadOpenGraph = async (id?: string) => {
   const post = id ? await getEntry("blog", id) : undefined;
-  const title = post?.data?.title ?? "Falconiere Barbosa";
-  const description = post?.data?.description ?? "Falconiere Barbosa - Blog";
+  const title = post?.data?.title ?? defaultMetaDescription.title
+  const description = post?.data?.description ?? defaultMetaDescription.description;
   const image = id ? `/api/${id}.png` : "/api/og-image.png";
   const author = post?.data?.author ?? "Falconiere Barbosa - Blog";
   const date = post?.data?.publishedAt ?? new Date().toISOString();
