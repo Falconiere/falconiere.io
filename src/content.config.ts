@@ -7,7 +7,7 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string(),
     author: z.string(),
-    cover: z.string(),
+    cover: z.string().default("Astronaut-Headshot-Closeup.jpg"),
     coverAlt: z.string(),
     publishedAt: z.coerce.date().transform((date) => date.toISOString()),
     draft: z.boolean(),
