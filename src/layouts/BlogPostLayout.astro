@@ -49,6 +49,7 @@ const post = await getEntry("blog", id);
       <div class="prose dark:prose-invert prose-lg max-w-none">
         <slot />
       </div>
+      <SocialLinks />
       <PostComments />
     </article>
     <Footer />
