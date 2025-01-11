@@ -1,6 +1,8 @@
 ---
 import Body from "@/components/Body.astro";
+import Footer from "@/components/Footer.astro";
 import Head from "@/components/Head.astro";
+import NewsLetterForm from "@/components/NewsLetterForm.astro";
 ---
 
 <!doctype html>
@@ -8,5 +10,7 @@ import Head from "@/components/Head.astro";
 	<Head />
 	<Body>
 		<slot />
+		<NewsLetterForm />
+		<Footer />
 	</Body>
 </html>

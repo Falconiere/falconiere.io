@@ -1,0 +1,63 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import avatar from "@/assets/avatar.png";
+import { Image } from "astro:assets";
+---
+
+<MainLayout>
+  <main class="max-w-4xl mx-auto p-6">
+    <div class="text-center pb-8">
+      <Image
+        src={avatar}
+        alt="Sarah Parker"
+        class="w-32 h-32 rounded-full mx-auto mb-8 object-cover"
+      />
+      <h1 class="text-4xl font-bold mb-4 dark:text-white">
+        Falconiere Barbosa
+      </h1>
+      <p class="text-xl text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
+        Devoted husband, proud father of Ágatha, passionate about technology,
+        science, music and a lifelong learner.
+      </p>
+    </div>
+    <div class="prose dark:prose-invert prose-lg max-w-none">
+      <p>
+        Hello! I'm Falconiere Barbosa, here you will find a collection of my
+        thoughts on different topics, from technology to music, from science to
+        personal development.
+      </p>
+      <h2>My Journey</h2>
+      <p>
+        Since 2014 I've been working as a software developer, and I've been
+        learning a lot about technology, software development, and personal
+        development. I'm passionate about learning new things and sharing my
+        knowledge with others. So, here I am, sharing my thoughts and ideas with
+        you.
+      </p>
+
+      <h2>What I Write About</h2>
+      <ul>
+        <li>Technology</li>
+        <li>Software Development</li>
+        <li>Personal Development</li>
+        <li>Music</li>
+        <li>Science</li>
+        <li>Books</li>
+        <li>And much more...</li>
+      </ul>
+
+      <h2>My Approach</h2>
+      <p>
+        I believe in the power of small, intentional changes to create
+        meaningful impact. Through my writing, I share practical insights and
+        personal experiences to help others navigate their own journey toward a
+        more mindful and balanced life.
+      </p>
+
+      <blockquote>
+        "The key to mindful living isn't in grand gestures, but in the small
+        choices we make every day."
+      </blockquote>
+    </div>
+  </main>
+</MainLayout>

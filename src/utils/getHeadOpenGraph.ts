@@ -7,7 +7,7 @@ export const getHeadOpenGraph = async (id?: string) => {
   const description = post?.data?.description ?? defaultMetaDescription.description;
   const image = id ? `/api/${id}.png` : "/api/og-image.png";
   const author = post?.data?.author ?? "Falconiere Barbosa - Blog";
-  const date = post?.data?.publishedAt ?? new Date().toISOString();
+  const date = post?.data?.date ?? new Date().toISOString();
   const tags = post?.data?.tags?.join(", ") ?? "";
   const url = id ? `https://falconiere.io/blog/${id}` : "https://falconiere.io";
   const site_name = "Falconiere Barbosa";
