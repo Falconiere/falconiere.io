@@ -5,14 +5,11 @@ import Head from "@/components/Head.astro";
 import PostComments from "@/components/PostComments.astro";
 import { getEntry } from "astro:content";
 import { getReadingTime } from "@/utils/readingTime";
-import Footer from "@/components/Footer.astro";
-import NewsLetterForm from "@/components/NewsLetterForm.astro";
 import SocialLinks from "@/components/SocialLinks.astro";
 const { id } = Astro.params;
 if (id === undefined) {
   return Astro.redirect("/404");
 }
-
 const post = await getEntry("blog", id);
 ---
 
@@ -20,39 +17,36 @@ const post = await getEntry("blog", id);
 <html lang="en">
   <Head />
   <Body>
-    <article class="max-w-4xl mx-auto p-6">
+    <article class="max-w-4xl mx-auto p-4 md:p-6">
       <div class="flex justify-between items-center pb-4">
         <a
           href="/"
-          class="inline-flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+          class="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
         >
           <i data-lucide="arrow-left" class="h-4 w-4"></i>
           <span>Back to Home</span>
         </a>
         <SocialLinks />
       </div>
-      <header>
-        <div
-          class="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400 mb-4"
-        >
+      <header class="border-divider pt-10">
+        <div class="flex items-center text-sm dark:text-gray-400 gap-2">
           <span>{post?.data.date?.toDateString()}</span>
           <span>•</span>
           <span>{getReadingTime(post?.body)}</span>
         </div>
-        <h1 class="text-4xl font-bold dark:text-white pb-4">
+        <h1 class="text-2xl md:text-4xl font-bold py-4">
           {post?.data.title}
         </h1>
-        <p class="text-xl text-gray-600 dark:text-gray-400">
+        <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400">
           {post?.data.description}
         </p>
       </header>
-      <div class="prose dark:prose-invert prose-lg max-w-none">
+      <div class="prose dark:prose-invert prose-lg max-w-none pb-20">
         <slot />
       </div>
       <SocialLinks />
       <PostComments />
     </article>
-    <Footer />
   </Body>
   <script>
     import { createIcons, ArrowLeft } from "lucide";

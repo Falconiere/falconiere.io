@@ -1,10 +1,9 @@
 export const defaultMetaDescription = {
-  title: "Hello! I'm Falconiere Barbosa!",
+  title: "Falconiere R. Barbosa – Personal Reflections on Growth, Science, Technology, and Philosophy",
   description: `
-I'm a software engineer, a devoted husband, proud father of Ágatha, passionate about technology, science, music and a lifelong learner.
-Here you can find some of my thoughts, projects, and experiences. Enjoy!
+Explore Falconiere.io, a personal blog by Falconiere R. Barbosa where curiosity meets reflection. Dive into insights on personal development, science, technology, philosophy, and more. Join the journey of discovery and growth!
 `,
-  summary: "I'm a software engineer, a devoted husband, proud father of Ágatha, passionate about technology, science, music and a lifelong learner.",
+  summary: "A software developer by profession, a lifelong learner by passion. My interests stretch far beyond code, into the realms of science, art, and the human experience. This blog reflects my journey of growth and discovery.",
   image: "Astronaut-Headshot-Closeup.jpeg",
   author: "Falconiere Barbosa",
 }

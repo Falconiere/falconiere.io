@@ -1,9 +1,27 @@
 ---
-
+import SocialLinks from "@/components/SocialLinks.astro";
 ---
 
-<footer class="dark:text-white max-w-4xl mx-auto p-6 text-center">
-  <p>
+<footer
+  class="p-4 md:p-6 text-center border-divider flex flex-col items-center gap-4"
+>
+  <SocialLinks />
+  <p class="text-gray-600 dark:text-gray-400 text-sm md:text-lg">
     Falconiere Barbosa &copy; {new Date().getFullYear()} - All rights reserved
   </p>
 </footer>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NBQWN32NGS"
+></script>
+<script>
+  //@ts-ignore
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    //@ts-ignore
+    dataLayer.push(arguments);
+  }
+  //@ts-ignore
+  gtag("js", new Date());
+  //@ts-ignore
+  gtag("config", "G-NBQWN32NGS");
+</script>

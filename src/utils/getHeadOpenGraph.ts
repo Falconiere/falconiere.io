@@ -14,7 +14,7 @@ export const getHeadOpenGraph = async (id?: string) => {
   const type = post ? "article" : "website";
   const coverAlt = post?.data?.coverAlt ?? "Falconiere Barbosa - Blog";
   return {
-    title,
+    title: id ? `${title} - Insights by Falconiere R. Barbosa` : title,
     description,
     image,
     author,

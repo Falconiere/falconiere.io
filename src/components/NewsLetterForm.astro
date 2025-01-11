@@ -1,34 +1,78 @@
 ---
 import SocialLinks from "@/components/SocialLinks.astro";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 ---
 
-<div class="prose dark:prose-invert prose-lg mx-auto max-w-4xl px-6">
-  <h2 class="mb-0">Let's Connect</h2>
-  <p>
-    I love hearing from readers and fellow mindfulness enthusiasts. Feel free to
-    reach out on Twitter or GitHub, or subscribe to my newsletter for weekly
-    insights and updates.
-  </p>
-  <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 scroll-pb-10 mt-4">
-    <h3 class="text-lg font-semibold mb-4 !mt-0">Newsletter</h3>
-    <p class="text-gray-600 dark:text-gray-400">
-      Join my weekly newsletter for insights on mindful living, minimalism, and
-      digital wellness.
-    </p>
-
-    <form class="flex gap-4">
-      <input
-        type="email"
-        placeholder="Enter your email"
-        class="flex-1 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-400"
-      />
-      <button
-        type="submit"
-        class="px-6 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
+<div
+  class="prose prose-lg max-w-none w-full text-foreground pt-10 border-divider"
+>
+  <form
+    action="https://app.kit.com/forms/7557019/subscriptions"
+    class="seva-form formkit-form p-4 md:p-8 rounded-lg border dark:bg-slate-900 text-center"
+    method="post"
+    data-sv-form="7557019"
+    data-uid="22a1cb9f33"
+    data-format="inline"
+    data-version="5"
+    data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Success! Now check your email to confirm your subscription.","redirect_url":""},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":true,"url":"https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}'
+  >
+    <div data-style="minimal">
+      <div class="formkit-header" data-element="header">
+        <h3 class="m-0 text-foreground text-xl md:text-2xl">
+          Join the Newsletter
+        </h3>
+        <p class="text-gray-500 dark:text-gray-400 text-[0.8em] md:text-xl">
+          Subscribe to get my latest content by email.
+        </p>
+      </div>
+      <ul
+        class="formkit-alert formkit-alert-error text-center"
+        data-element="errors"
+        data-group="alert"
       >
-        Subscribe
-      </button>
-    </form>
-    <SocialLinks />
-  </div>
+      </ul>
+      <div
+        data-element="fields"
+        data-stacked="true"
+        class="seva-fields formkit-fields flex flex-col gap-4"
+      >
+        <div class="formkit-field">
+          <Input
+            className="formkit-input"
+            aria-label="First Name"
+            name="fields[first_name]"
+            required
+            placeholder="First Name"
+            type="text"
+          />
+        </div>
+        <div class="formkit-field">
+          <Input
+            className="formkit-input"
+            name="email_address"
+            aria-label="Email Address"
+            placeholder="Email Address"
+            required
+            type="email"
+          />
+        </div>
+        <Button data-element="submit" className="formkit-submit formkit-submit">
+          Subscribe
+        </Button>
+      </div>
+      <div
+        class="formkit-guarantee text-center pt-4 text-sm text-gray-500 dark:text-gray-400"
+        data-element="guarantee"
+      >
+        We won't send you spam. Unsubscribe at any time.
+      </div>
+    </div>
+    <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+  </form>
 </div>
+<style is:global>
+  .formkit-alert {
+    text-align: center;
+  }
+</style>

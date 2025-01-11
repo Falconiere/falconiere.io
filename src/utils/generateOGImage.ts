@@ -11,76 +11,88 @@ type Params = {
   post?: CollectionEntry<"blog"> | null;
 }
 
-const buildRandomLinearGradientCssTwoColors = () => {
-  const colors = [
-    "#FF0000",
-    "#FF7F00",
-    "#FFFF00",
-    "#00FF00",
-    "#0000FF",
-    "#4B0082",
-    "#8B00FF",
-  ];
-  const randomColor1 = colors[Math.floor(Math.random() * colors.length)];
-  const randomColor2 = colors[Math.floor(Math.random() * colors.length)];
-  return `linear-gradient(135deg, ${randomColor1}, ${randomColor2})`;
-}
-
-const getLocalImageToBase64 = async (image: string) => {
-  const pathImage = `./src/data/blog/assets/images/${image}`;
+const getLocalImageToBase64 = async (pathImage: string) => {
   const imageBuffer = await fs.readFile(pathImage);
-  let ext = path.extname(image).slice(1);
+  let ext = path.extname(pathImage).slice(1);
   if (ext === "jpg") {
     ext = "jpeg";
   }
   // transform the image to size 250x250
-  const resizedImage = await sharp(imageBuffer).resize(250, 250).toBuffer();
+  // const resizedImage = await sharp(imageBuffer).resize(250, 250).toBuffer();
 
   // transform the image to base64
-  const finalImage = Buffer.from(resizedImage).toString('base64');
+  const finalImage = Buffer.from(imageBuffer).toString('base64');
   return `data:image/${ext};base64,${finalImage}`;
 }
 
 export const generateOGImage = async ({ post }: Params = {}) => {
-  const openSansBold = await fs.readFile(
-    "./public/fonts/Open_Sans/static/OpenSans-Bold.ttf"
+  const interExtraBold = await fs.readFile(
+    "./public/fonts/Inter/static/Inter_28pt-ExtraBold.ttf"
   );
 
-  const openSansRegular = await fs.readFile(
-    "./public/fonts/Open_Sans/static/OpenSans-Regular.ttf"
+  const interRegular = await fs.readFile(
+    "./public/fonts/Inter/static/Inter_28pt-Regular.ttf"
   );
 
-  const title = post?.data?.title || defaultMetaDescription.title;
-  const description = post?.data?.description || defaultMetaDescription.description;
-  const image = await getLocalImageToBase64(post?.data?.cover ?? defaultMetaDescription.image);
+  const isPost = post !== undefined;
+
+  const title = post?.data?.title || "Falconiere R. Barbosa"
+  const description = post?.data?.description || defaultMetaDescription.summary
+  const pathImage = post?.data?.cover
+    ? `./src/data/blog/assets/images/${post?.data?.cover}`
+    : "./src/data/blog/assets/images/Astronaut-Headshot-Closeup.jpeg";
+
+
+  const image = await getLocalImageToBase64(pathImage);
+  const logo = await getLocalImageToBase64("./public/logo.png");
+  const avatar = await getLocalImageToBase64("./src/assets/avatar.png");
+
   const template = html`
   <div style="
     display: flex; 
-    height: 100%; 
-    width: 100%; 
-    background-image: ${buildRandomLinearGradientCssTwoColors()};
+    height: 630px; 
+    width: 1200px; 
     color: white;
-    font-family: OpenSansRegular;
-    position: relative;
+    font-family: InterRegular;
+    ${isPost && (
+      `
+        background-image: url(${image});
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+      `
+    )}
+    ${!isPost && (`background-color: #000;`)}
   ">
-    <div style="display: flex; padding: 40px; width: 100%; height: 100%; box-sizing: border-box;
+    <div style="display: flex; padding: 40px; width: 1210px; height: 630px; box-sizing: border-box;
       justify-content: center;
       align-items: center;
-      background: rgba(0, 0, 0, 0.7);
-      gap: 20px;
+      gap: 30px;
+      background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%,  rgba(0, 0, 0, 0.7) 100%,  rgba(0, 0, 0, 0.5) 100%);
     ">
-      <img src="${image}" style="width: 250px; height: 250px; border-radius: 50%;" />
+      <img 
+        src="${avatar}" 
+        style="width: 400px; height: 400px; border-radius: 50%;
+        object-fit: cover;
+        overflow: hidden;
+        ${isPost && (`display: none;`)}
+        "/>
       <div style="display: flex; flex-direction: column; justify-content: center; flex: 1; margin: auto 0;">
-        <h1 style="font-size: 46px; margin: 0; font-family: OpenSansBold">
+        <h1 style="
+          font-size: 48px;
+          margin: 0px; font-family: InterExtraBold; text-transform: uppercase;">
           ${title}
         </h1>
-        <p style="font-size: 24px; line-height: 1.3; margin: 0; font-family: OpenSansRegular; white-space: pre-wrap;">
+        <p style="font-size: 24px; margin: 0px font-family: InterRegular;">
           ${description}
         </p>
       </div>
     </div>
-    
+    <img src="${logo}" style="position: absolute; bottom: 20px; right: 20px; width: 100px; height: 100px; border-radius: 50%;"/>
   </div>`
+
   const svg = await satori(
     template as unknown as string,
     {
@@ -88,12 +100,12 @@ export const generateOGImage = async ({ post }: Params = {}) => {
       height: 630,
       fonts: [
         {
-          name: "OpenSansBold",
-          data: openSansBold,
+          name: "InterExtraBold",
+          data: interExtraBold,
         },
         {
-          name: "OpenSansRegular",
-          data: openSansRegular,
+          name: "InterRegular",
+          data: interRegular,
         }
       ],
     }

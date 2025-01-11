@@ -2,11 +2,12 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 import avatar from "@/assets/avatar.png";
 import { Image } from "astro:assets";
+import NewsLetterForm from "@/components/NewsLetterForm.astro";
 ---
 
 <MainLayout>
-  <main class="max-w-4xl mx-auto p-6">
-    <div class="text-center pb-8">
+  <main class="max-w-4xl mx-auto p-6 pb-10">
+    <div class="text-center pb-10">
       <Image
         src={avatar}
         alt="Sarah Parker"
@@ -15,49 +16,43 @@ import { Image } from "astro:assets";
       <h1 class="text-4xl font-bold mb-4 dark:text-white">
         Falconiere Barbosa
       </h1>
-      <p class="text-xl text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
+      <p
+        class="text-lg italic text-gray-600 dark:text-gray-400 max-w-xl mx-auto"
+      >
         Devoted husband, proud father of Ágatha, passionate about technology,
-        science, music and a lifelong learner.
+        science, music, and a lifelong learner.
       </p>
     </div>
-    <div class="prose dark:prose-invert prose-lg max-w-none">
+    <div
+      class="prose dark:prose-invert prose-lg max-w-none py-8 border-divider"
+    >
+      <h2>Who Am I?</h2>
       <p>
-        Hello! I'm Falconiere Barbosa, here you will find a collection of my
-        thoughts on different topics, from technology to music, from science to
-        personal development.
+        A software developer by profession, a lifelong learner by passion. My
+        interests stretch far beyond code, into the realms of science, art, and
+        the human experience. This blog reflects my journey of growth and
+        discovery
       </p>
-      <h2>My Journey</h2>
+      <h2>What You’ll Find Here</h2>
       <p>
-        Since 2014 I've been working as a software developer, and I've been
-        learning a lot about technology, software development, and personal
-        development. I'm passionate about learning new things and sharing my
-        knowledge with others. So, here I am, sharing my thoughts and ideas with
-        you.
+        Reflections, explorations, and insights on topics that inspire me. From
+        personal growth and philosophy to technology and music, I write about
+        what excites me, challenges me, and keeps me learning.
       </p>
-
-      <h2>What I Write About</h2>
-      <ul>
-        <li>Technology</li>
-        <li>Software Development</li>
-        <li>Personal Development</li>
-        <li>Music</li>
-        <li>Science</li>
-        <li>Books</li>
-        <li>And much more...</li>
-      </ul>
-
       <h2>My Approach</h2>
       <p>
-        I believe in the power of small, intentional changes to create
-        meaningful impact. Through my writing, I share practical insights and
-        personal experiences to help others navigate their own journey toward a
-        more mindful and balanced life.
+        Curiosity drives everything I do. I embrace a multidisciplinary mindset,
+        diving deep into topics that challenge conventional thinking and foster
+        growth. My goal is to connect ideas, spark new perspectives, and
+        encourage thoughtful conversations
       </p>
-
-      <blockquote>
-        "The key to mindful living isn't in grand gestures, but in the small
-        choices we make every day."
-      </blockquote>
+      <h2>Join the Conversation</h2>
+      <p>
+        This isn’t just about my ideas—it’s about the exchange of perspectives.
+        I welcome your thoughts, questions, and feedback as we navigate the
+        wonders of the world together.
+      </p>
     </div>
+    <NewsLetterForm />
   </main>
 </MainLayout>

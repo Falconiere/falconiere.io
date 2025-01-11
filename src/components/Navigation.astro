@@ -2,10 +2,10 @@
 import { Image } from "astro:assets";
 ---
 
-<nav
-  class="border-b dark:border-gray-800 sticky left-0 top-0 bg-white dark:bg-gray-900"
->
-  <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+<nav class="border-b sticky left-0 top-0 bg-background">
+  <div
+    class="max-w-4xl mx-auto px-4 md:px-6 py-2 md:py-4 flex justify-between items-center"
+  >
     <div class="flex items-center space-x-2">
       <a href="/" class="flex items-center space-x-2">
         <Image
@@ -16,18 +16,13 @@ import { Image } from "astro:assets";
           width={32}
           height={32}
         />
-        <span class="font-semibold text-xl dark:text-white"
+        <span class="font-semibold text-xl text-foreground hidden md:inline"
           >Falconiere Barbosa</span
         >
       </a>
     </div>
     <div class="flex items-center space-x-6">
-      <a
-        href="/about"
-        class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
-      >
-        About
-      </a>
+      <a href="/about" class="hover:opacity-70">About</a>
       <button
         class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
         aria-label="Toggle theme"
