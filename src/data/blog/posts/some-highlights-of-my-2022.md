@@ -4,7 +4,7 @@ cover: cover-2022.webp
 coverAlt: cover 2022
 description: 2022 was the year that happened a lot to me, good and bad.
 author: Falconiere Barbosa
-draft: true
+draft: false
 date: 2023-01-02
 tags:
 ---

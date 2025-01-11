@@ -17,6 +17,13 @@ const getLocalImageToBase64 = async (pathImage: string) => {
   if (ext === "jpg") {
     ext = "jpeg";
   }
+  if (ext === "webp") {
+    // transform the image to png
+
+    const pngImage = await sharp(imageBuffer).png().toBuffer();
+    const finalImage = Buffer.from(pngImage).toString('base64');
+    return `data:image/png;base64,${finalImage}`;
+  }
   // transform the image to size 250x250
   // const resizedImage = await sharp(imageBuffer).resize(250, 250).toBuffer();
 
