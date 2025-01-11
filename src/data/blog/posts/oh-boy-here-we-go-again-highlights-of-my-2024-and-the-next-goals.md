@@ -36,7 +36,7 @@ Well, 2025 is here, and I will do my best to accomplish my dreams, get all the p
 * I will continue learning to improve my professional, technical, and communication skills. 
 * I will build better products and help my team to grow at my job.
 * I will share more about things beyond my job. I enjoy various activities, such as playing guitar or reading sci-fi books, and I want to share that part of myself. 
-* I will write more posts for my <a href="https://falconiere.io" target="_blank">website</a>
+* I will write more posts for my <a href="https://falconiere.io" target="_blank">website</a>.
 * I will keep going to the gym and be healthier physically and mentally. 
 #### Goals
 Every year, I set goals to pursue, and most of the time, I fail to achieve some of them, which is fine. The important thing is that you never have to give up unless you have something impossible; that is obvious.  So, here are my goals for 2025: 
