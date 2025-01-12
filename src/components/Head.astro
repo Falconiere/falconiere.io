@@ -1,7 +1,8 @@
 ---
 import "@/styles/tailwind.css";
 import { getHeadOpenGraph } from "@/utils/getHeadOpenGraph";
-const { id } = Astro.params;
+const { path } = Astro.params;
+const id = path?.split("/")?.[0];
 const meta = await getHeadOpenGraph(id);
 ---
 
