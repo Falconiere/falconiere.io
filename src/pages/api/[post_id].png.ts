@@ -3,8 +3,8 @@ import type { APIRoute } from "astro";
 import { getCollection, getEntry } from "astro:content";
 
 export const GET: APIRoute = async ({ params }) => {
-  const post_id = params.post_id;
-  const post = post_id ? await getEntry("blog", post_id) : null
+  const slug = params.slug;
+  const post = slug ? await getEntry("blog", slug) : null
   const png = await generateOGImage({ post });
   return new Response(png, {
     headers: {
@@ -16,6 +16,6 @@ export const GET: APIRoute = async ({ params }) => {
 export const getStaticPaths = async () => {
   const posts = await getCollection("blog");
   return posts.map((post) => ({
-    params: { post_id: post.id },
+    params: { slug: post.id },
   }));
 }

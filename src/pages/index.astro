@@ -17,10 +17,7 @@ const posts = await getCollection("blog", ({ data }) => {
 		<div class="grid pt-4">
 			{
 				posts.map((post) => (
-					<a
-						href={`/blog/posts/${post.id}/${post.data.createdAt}`}
-						class="border-divider group py-6"
-					>
+					<a href={`/blog/posts/${post.id}`} class="border-divider group py-6">
 						<article class="group cursor-pointer flex gap-2 flex-col hover:opacity-70">
 							<PostTimeInfo post={post} />
 							<div>

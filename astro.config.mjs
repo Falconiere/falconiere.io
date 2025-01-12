@@ -8,7 +8,14 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://falconiere.io',
-  integrations: [tailwind({
-    applyBaseStyles: false
-  }), mdx(), sitemap(), react()],
+  integrations: [
+    tailwind({
+      applyBaseStyles: false
+    }),
+    mdx({
+      optimize: true,
+    }),
+    sitemap(),
+    react()
+  ],
 });

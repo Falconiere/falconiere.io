@@ -4,15 +4,14 @@ import Body from "@/components/Body.astro";
 import Head from "@/components/Head.astro";
 import PostComments from "@/components/PostComments.astro";
 import { getEntry } from "astro:content";
-import { getReadingTime } from "@/utils/readingTime";
 import SocialLinks from "@/components/SocialLinks.astro";
 import PostTimeInfo from "@/components/PostTimeInfo.astro";
-const { path } = Astro.params;
-const id = path?.split("/")[0];
-if (id === undefined) {
+const { slug } = Astro.params;
+
+if (slug === undefined) {
   return Astro.redirect("/404");
 }
-const post = await getEntry("blog", id);
+const post = await getEntry("blog", slug);
 ---
 
 <!doctype html>
