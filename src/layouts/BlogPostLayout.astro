@@ -6,6 +6,7 @@ import PostComments from "@/components/PostComments.astro";
 import { getEntry } from "astro:content";
 import SocialLinks from "@/components/SocialLinks.astro";
 import PostTimeInfo from "@/components/PostTimeInfo.astro";
+import Link from "@/components/Link.astro";
 const { slug } = Astro.params;
 
 if (slug === undefined) {
@@ -20,13 +21,10 @@ const post = await getEntry("blog", slug);
   <Body>
     <article class="max-w-4xl mx-auto p-4 md:p-6">
       <div class="flex justify-between items-center pb-4">
-        <a
-          href="/"
-          class="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
-        >
+        <Link href="/">
           <i data-lucide="arrow-left" class="h-4 w-4"></i>
           <span>Back to Home</span>
-        </a>
+        </Link>
         <SocialLinks />
       </div>
       <header class="border-divider pt-10">
