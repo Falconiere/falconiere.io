@@ -20,19 +20,30 @@ const meta = await getHeadOpenGraph(id);
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta property="og:image" content={meta.image} />
 
+  <meta name="title" content={meta.title} />
+  <meta name="description" content={meta.description} />
+  <meta name="author" content={meta.author} />
+  <!-- <meta name="keywords" content={meta.keywords} /> -->
+  <!-- <meta name="robots" content="index, follow" /> -->
+
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content={meta.title} />
+  <meta itemprop="description" content={meta.description} />
+  <meta itemprop="image" content={meta.image} />
+
   <!-- Twitter Meta Tags -->
   <meta property="twitter:image" content={meta.image} />
   <meta name="twitter:title" content={meta.title} />
   <meta name="twitter:description" content={meta.description} />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta property="twitter:domain" content="falconiere.io" />
+  <meta property="twitter:domain" content="https://falconiere.io" />
   <meta name="twitter:site" content="@falconiererb" />
   <meta name="twitter:creator" content="@falconiererb" />
 
   <!-- Facebook Meta Tags -->
 
   <meta property="og:title" content={meta.title} />
-  <meta property="og:logo" content="/logo.png" />
+  <meta property="og:logo" content="https://falconiere.io/logo.png" />
   <meta property="og:description" content={meta.description} />
   <meta property="og:image:alt" content={meta.coverAlt} />
   <meta property="og:image:width" content="1200" />
