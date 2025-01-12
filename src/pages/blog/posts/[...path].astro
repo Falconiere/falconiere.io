@@ -1,12 +1,12 @@
 ---
 import BlogPostLayout from "@/layouts/BlogPostLayout.astro";
-import { buildPostStaticPath } from "@/utils/buildPostStaticPath";
+
 import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
   return posts.map((post) => ({
-    params: { url: buildPostStaticPath(post) },
+    params: { path: post.id },
     props: { post },
   }));
 }

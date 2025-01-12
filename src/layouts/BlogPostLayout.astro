@@ -7,12 +7,11 @@ import { getEntry } from "astro:content";
 import SocialLinks from "@/components/SocialLinks.astro";
 import PostTimeInfo from "@/components/PostTimeInfo.astro";
 import Link from "@/components/Link.astro";
-const { url } = Astro.params;
-const slug = url?.split("/")?.[1];
-if (slug === undefined) {
+const { path } = Astro.params;
+if (path === undefined) {
   return Astro.redirect("/404");
 }
-const post = await getEntry("blog", slug);
+const post = await getEntry("blog", path);
 ---
 
 <!doctype html>

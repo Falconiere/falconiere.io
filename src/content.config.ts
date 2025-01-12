@@ -3,7 +3,7 @@ import { glob } from 'astro/loaders';
 import { format } from 'date-fns';
 
 const blog = defineCollection({
-  loader: glob({ pattern: '*.{md,mdx}', base: "./src/data/blog/posts" }),
+  loader: glob({ pattern: '**/*.{md,mdx}', base: "./src/data/blog/posts" }),
   schema: () => z.object({
     title: z.string(),
     description: z.string(),
