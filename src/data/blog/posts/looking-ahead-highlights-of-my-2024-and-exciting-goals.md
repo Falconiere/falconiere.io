@@ -1,17 +1,18 @@
 ---
-title: "Looking Ahead: Highlights of My 2024 and Exciting Goals!"
+title: Looking Ahead-Highlights of My 2024 and Exciting Goals
 cover: Astronaut-Headshot-Closeup.jpeg
 coverAlt: Space poster astronaut
-description: 2024 was a year filled with positive experiences for me. Here are my highlights!
+description: Here is the short description
 author: Falconiere Barbosa
 draft: false
-date: 2025-01-09
+date: 2025-01-08
 tags:
   - highlights
   - new
   - goals
   - years-resolution
   - well-being
+createAt: 20250108002352
 ---
 
 ![Astronaut-Headshot-Closeup.jpeg](../assets/images/Astronaut-Headshot-Closeup.jpeg)

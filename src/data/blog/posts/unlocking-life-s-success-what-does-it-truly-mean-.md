@@ -1,12 +1,16 @@
 ---
-title: "Unlocking Life's Success: What Does It Truly Mean?"
-cover: beach-woman-shadow.webp
+title: Unlocking Life's Success-What Does It Truly Mean?
+cover: Astronaut-Headshot-Closeup.jpeg
 coverAlt: Space poster astronaut
-description: I wish I could be successful like everyone on Instagram, where my biggest achievement is getting out of bed before noon!
+description: Here is the short description
 author: Falconiere Barbosa
 draft: false
-date: 2025-01-11
+date: 2021-12-07
 tags:
+  - success
+  - money
+  - life
+createAt: 20250112002526
 ---
 ![beach-woman-shadow.webp](../assets/images/beach-woman-shadow.webp)
 In my mind, being successful would be like Elon Musk, one of the most influential people in the world, but that’s a stupid thought because I’ll never be like him, and that’s fine.

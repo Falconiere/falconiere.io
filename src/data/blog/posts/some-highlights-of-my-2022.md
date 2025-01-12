@@ -1,11 +1,11 @@
 ---
 title: Some highlights of my 2022
-cover: cover-2022.webp
-coverAlt: cover 2022
-description: 2022 was the year that happened a lot to me, good and bad.
+cover: Astronaut-Headshot-Closeup.jpeg
+coverAlt: Space poster astronaut
+description: Here is the short description
 author: Falconiere Barbosa
 draft: true
-date: 2023-01-02
+date: 2025-01-12
 tags:
   - goals
   - highlights
@@ -13,6 +13,7 @@ tags:
   - mental
   - well-being
   - years-resolution
+createAt: 20250112002441
 ---
 ![cover-2022.webp](../assets/images/cover-2022.webp)
 #### First
