@@ -13,7 +13,7 @@ tags:
   - mental
   - well-being
   - years-resolution
-createAt: 20250112002441
+createdAt: 20250112002441
 ---
 ![cover-2022.webp](../assets/images/cover-2022.webp)
 #### First

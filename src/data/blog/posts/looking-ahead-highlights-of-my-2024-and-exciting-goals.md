@@ -12,7 +12,7 @@ tags:
   - goals
   - years-resolution
   - well-being
-createAt: 20250108002352
+createdAt: 20250108002352
 ---
 
 ![Astronaut-Headshot-Closeup.jpeg](../assets/images/Astronaut-Headshot-Closeup.jpeg)

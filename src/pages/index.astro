@@ -1,8 +1,8 @@
 ---
-import { getReadingTime } from "@/utils/readingTime";
 import MainLayout from "../layouts/MainLayout.astro";
 import { getCollection } from "astro:content";
 import NewsLetterForm from "@/components/NewsLetterForm.astro";
+import PostTimeInfo from "@/components/PostTimeInfo.astro";
 const posts = await getCollection("blog", ({ data }) => {
 	return data.draft !== true;
 });
@@ -17,13 +17,12 @@ const posts = await getCollection("blog", ({ data }) => {
 		<div class="grid pt-4">
 			{
 				posts.map((post) => (
-					<a href={`/blog/posts/${post.id}`} class="border-divider group py-6">
+					<a
+						href={`/blog/posts/${post.id}/${post.data.createdAt}`}
+						class="border-divider group py-6"
+					>
 						<article class="group cursor-pointer flex gap-2 flex-col hover:opacity-70">
-							<div class="flex items-center text-sm dark:text-gray-400 gap-2">
-								<span>{post.data.date?.toDateString()}</span>
-								<span>•</span>
-								<span>{getReadingTime(post.body)}</span>
-							</div>
+							<PostTimeInfo post={post} />
 							<div>
 								<h2 class="text-xl font-bold pb-1">{post.data.title}</h2>
 								<p class="font-medium text-gray-600 dark:text-gray-400">

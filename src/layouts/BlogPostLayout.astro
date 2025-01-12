@@ -6,7 +6,9 @@ import PostComments from "@/components/PostComments.astro";
 import { getEntry } from "astro:content";
 import { getReadingTime } from "@/utils/readingTime";
 import SocialLinks from "@/components/SocialLinks.astro";
-const { id } = Astro.params;
+import PostTimeInfo from "@/components/PostTimeInfo.astro";
+const { path } = Astro.params;
+const id = path?.split("/")[0];
 if (id === undefined) {
   return Astro.redirect("/404");
 }
@@ -29,11 +31,7 @@ const post = await getEntry("blog", id);
         <SocialLinks />
       </div>
       <header class="border-divider pt-10">
-        <div class="flex items-center text-sm dark:text-gray-400 gap-2">
-          <span>{post?.data.date?.toDateString()}</span>
-          <span>•</span>
-          <span>{getReadingTime(post?.body)}</span>
-        </div>
+        <PostTimeInfo post={post} />
         <h1 class="text-2xl md:text-4xl font-bold py-4">
           {post?.data.title}
         </h1>
