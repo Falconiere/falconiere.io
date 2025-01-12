@@ -3,12 +3,17 @@ import MainLayout from "../layouts/MainLayout.astro";
 import { getCollection } from "astro:content";
 import NewsLetterForm from "@/components/NewsLetterForm.astro";
 import PostTimeInfo from "@/components/PostTimeInfo.astro";
-const posts = await getCollection("blog", ({ data }) => {
+import { sortByDate } from "@/utils/sortByDate";
+import { mapBlogCollection } from "@/utils/mapBlogCollection";
+
+const data = await getCollection("blog", ({ data }) => {
 	return data.draft !== true;
 });
+
+const posts = data.map(mapBlogCollection).sort(sortByDate);
 ---
 
-<MainLayout>
+<MainLayout section="home">
 	<main class="max-w-4xl mx-auto p-6 pb-10">
 		<h1 class="text-4xl font-bold pb-2">Latest</h1>
 		<p class="text-xl max-w-2xl text-gray-30">
@@ -17,7 +22,7 @@ const posts = await getCollection("blog", ({ data }) => {
 		<div class="grid pt-4">
 			{
 				posts.map((post) => (
-					<a href={`/blog/posts/${post.id}`} class="border-divider group py-6">
+					<a href={post.data.url} class="border-divider group py-6">
 						<article class="group cursor-pointer flex gap-2 flex-col hover:opacity-70">
 							<PostTimeInfo post={post} />
 							<div>

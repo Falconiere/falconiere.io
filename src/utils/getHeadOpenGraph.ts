@@ -1,4 +1,5 @@
 import { defaultMetaDescription } from "@/data/site/defaultMetaDescription";
+import { buildPostURL } from "@/utils/buildPostURL";
 import { getEntry } from "astro:content";
 import { format } from "date-fns";
 
@@ -10,11 +11,13 @@ export const getHeadOpenGraph = async (slug?: string) => {
   const author = post?.data?.author ?? defaultMetaDescription.author;
   const date = format(new Date(post?.data?.date ?? new Date()), "yyyy-MM-dd");
   const tags = post?.data?.tags?.join(", ") ?? "";
-  const url = slug ? `https://falconiere.io/blog/posts/${slug}` : "https://falconiere.io";
+  const url = post ? buildPostURL(post) : "https://falconiere.io";
   const site_name = "Falconiere Barbosa";
   const type = post ? "article" : "website";
   const coverAlt = post?.data?.coverAlt ?? "Falconiere Barbosa - Blog";
   const keywords = defaultMetaDescription.keywords;
+  const section = slug ? "blog" : "home";
+
   return {
     title: slug ? `${title} - Insights by Falconiere R. Barbosa` : title,
     description,
@@ -27,5 +30,6 @@ export const getHeadOpenGraph = async (slug?: string) => {
     type,
     coverAlt,
     keywords,
+    section
   };
 };
