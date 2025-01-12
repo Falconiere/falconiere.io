@@ -1,8 +1,8 @@
 ---
-title: Unlocking Life's Success-What Does It Truly Mean?
-cover: Astronaut-Headshot-Closeup.jpeg
-coverAlt: Space poster astronaut
-description: Here is the short description
+title: "Unlocking Life's Success: What Does It Truly Mean?"
+cover: beach-woman-shadow.webp
+coverAlt: "Image Cover Unlocking Life's Success: What Does It Truly Mean?"
+description: I wish I could be successful like everyone on Instagram, where my biggest achievement is getting out of bed before noon!
 author: Falconiere Barbosa
 draft: false
 date: 2021-12-07
