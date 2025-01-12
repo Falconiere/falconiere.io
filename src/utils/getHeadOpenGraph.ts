@@ -1,5 +1,6 @@
 import { defaultMetaDescription } from "@/data/site/defaultMetaDescription";
 import { getEntry } from "astro:content";
+import { format } from "date-fns";
 
 export const getHeadOpenGraph = async (id?: string) => {
   const post = id ? await getEntry("blog", id) : undefined;
@@ -18,7 +19,7 @@ export const getHeadOpenGraph = async (id?: string) => {
     description,
     image: `https://falconiere.io/${image}`,
     author,
-    date,
+    date: format(new Date(date), "yyyy-MM-dd"),
     tags,
     url,
     site_name,
