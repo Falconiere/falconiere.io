@@ -9,14 +9,14 @@ export const getHeadOpenGraph = async (id?: string) => {
   const author = post?.data?.author ?? "Falconiere Barbosa - Blog";
   const date = post?.data?.date ?? new Date().toISOString();
   const tags = post?.data?.tags?.join(", ") ?? "";
-  const url = id ? `https://falconiere.io/blog/${id}` : "https://falconiere.io";
+  const url = id ? `https://falconiere.io/blog/${id}/${post?.data.createdAt}` : "https://falconiere.io";
   const site_name = "Falconiere Barbosa";
   const type = post ? "article" : "website";
   const coverAlt = post?.data?.coverAlt ?? "Falconiere Barbosa - Blog";
   return {
     title: id ? `${title} - Insights by Falconiere R. Barbosa` : title,
     description,
-    image,
+    image: `https://falconiere.io/${image}`,
     author,
     date,
     tags,
