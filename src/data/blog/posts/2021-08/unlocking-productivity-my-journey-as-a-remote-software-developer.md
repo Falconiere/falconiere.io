@@ -4,11 +4,16 @@ cover: cover-software-developer.webp
 coverAlt: Image Cover Software Developer
 description: Working from home has truly transformed my life! I’ve gained extra time and a bit more money in my pocket, even if it’s not as much as I’d like 😅. It's incredible how this new setup has changed my daily routine!
 author: Falconiere Barbosa
-draft: true
+draft: false
 date: 2021-08-25
 createdAt: 20250112213554
 tags:
   - blogging
+  - remote
+  - working
+  - balence
+  - money
+  - streess-fgree
 ---
 ![cover-software-developer.webp](../../assets/images/cover-software-developer.webp)
 
