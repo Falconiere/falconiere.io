@@ -29,7 +29,7 @@ Well, not everything was entirely good, you guys don't know, but I was fighting 
 
 I know depression has cycles, and we never know when the next cycle will come. It was a long and arduous journey, filled with ups and downs, but I never gave up. I sought help, I tried different treatments, and I kept pushing forward. And now, I can proudly say that I've overcome it.  I can finally tell I am more than happier! And, of course, my wife and daughter have a huge part in this. 
 #### Workout
-I haven't gotten into the best shape yet, but I have been consistent at the gym. I have lost about 11 kilograms (75 kilograms now) and gained more muscle. I still have work to do to achieve my dream body, but I am close. 
+I haven't gotten into the best shape yet but have been consistent at the gym. I have lost about 11 kilograms (75 kilograms now) and gained more muscle. I still have work to achieve my dream body, but I am close. 
 #### New Home
 So, by the end of 2024, we moved to a new house—a bigger house with more rooms and a beautiful view. Oh gosh, I love it! This place makes me more comfortable. I have space to be creative and achieve my goals. 
 #### Continue With Good Habits
@@ -47,7 +47,7 @@ Every year, I set goals to pursue, and most of the time, I fail to achieve some 
 * Make a post for <a href="https://falconiere.io" target="_blank">falconiere.io</a> every two weeks.
 * Make a post for <a href="https://codafolks.com" target="_blank">codafolks.com</a>  every month.
 * Make at least one project profitable from <a href="https://codafolks.com" target="_blank">codafolks.com</a>.
-* Monetise my <a href="(https://www.youtube.com/@falconiere" target="_blank">YouTube channel</a>.
+* Monetise my <a href="https://www.youtube.com/@falconiere" target="_blank">YouTube channel</a>.
 * Make one international travel. 
 * Buy a new house.
 
