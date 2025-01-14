@@ -1,8 +1,8 @@
 ---
-title: "Looking Ahead: Highlights of My 2024 and Exciting Goals!"
+title: Highlights of My 2024 and Exciting Goals!
 cover: Astronaut-Headshot-Closeup.jpeg
 coverAlt: "Image Cover Looking Ahead: Highlights of My 2024 and Exciting Goals!"
-description: 2024 was a year filled with positive experiences for me. Here are my highlights!
+description: 2024 proved to be a year rich with valuable experiences that contributed to my growth. Here are my highlights!
 author: Falconiere Barbosa
 draft: false
 date: 2025-01-08
@@ -19,13 +19,13 @@ createdAt: 20250108002352
 
 In 2024, I failed again on my New Year's resolutions, like getting rich or hitting the gym (even though I worked out a lot ), but I accomplished a few things. Let's get started.
 #### My daughter
-My daughter was born in July precisely. I never imagined how being a father would change my life in many ways. It's hard to describe the feeling I have every day. It's like falling in love again and again with the same little one. It made me stronger, more responsible, and happier.  Oh boy, the best feeling ever. 
+My daughter was born in June. I never imagined how being a father would change my life in so many ways. It's hard to describe the feeling I have every day. It's like falling in love again and again with the same little one. It has made me stronger, more responsible, and happier. Oh boy, it's the best feeling ever. 
 #### Work and side-projects
 The other good thing is that in 2024, I also fell in love with my profession. I was unmotivated and without direction, but I found my way and greatly enjoyed my job again! Thank you, my teammates. 
 
 Also, I finally launched a project (<a href="https://codafolks.com" target="_blank">codafolks</a>, which is still in progress), started building more projects, and learned a lot. These projects were not just about work; they were about my passion. I poured my heart and soul into them, and the satisfaction I got from seeing them come to life was unparalleled. That feels so good.  
 #### Knout Depression 
-Well, not everything was entirely good, you guys don't know, but I was fighting against depression for so long (about 15 years, precisely), and I thought I would never win. Yup, this is a little dark subject of my life. But now, I feel confident about sharing with everyone because I am finally cured, at least temporarily. 
+Well, not everything was entirely good, you guys don't know, but I was fighting against depression for so long (about 15 years), and I thought I would never win. Yup, this is a little dark subject of my life. But now, I feel confident about sharing with everyone because I am finally cured, at least temporarily. 
 
 I know depression has cycles, and we never know when the next cycle will come. It was a long and arduous journey, filled with ups and downs, but I never gave up. I sought help, I tried different treatments, and I kept pushing forward. And now, I can proudly say that I've overcome it.  I can finally tell I am more than happier! And, of course, my wife and daughter have a huge part in this. 
 #### Workout
