@@ -15,7 +15,7 @@ tags:
   - money
   - streess-fgree
 ---
-![cover-software-developer.webp](../../assets/images/cover-software-developer.webp)
+![cover-software-developer.webp](../../../assets/images/cover-software-developer.webp)
 
 My name is Falconiere; I am from Brazil, and I am a software developer.  
 I have been working remotely for almost four years, and as a software developer, finding a job to work from home wasn't complicated. In the tech industry, there are a lot of opportunities.

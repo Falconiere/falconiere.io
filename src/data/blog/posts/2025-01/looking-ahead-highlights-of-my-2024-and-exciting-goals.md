@@ -15,7 +15,7 @@ tags:
 createdAt: 20250108002352
 ---
 
-![Astronaut-Headshot-Closeup.jpeg](../../assets/images/Astronaut-Headshot-Closeup.jpeg)
+![Astronaut-Headshot-Closeup.jpeg](../../../assets/images/Astronaut-Headshot-Closeup.jpeg)
 
 In 2024, I failed again on my New Year's resolutions, like getting rich or hitting the gym (even though I worked out a lot ), but I accomplished a few things. Let's get started.
 #### My daughter
