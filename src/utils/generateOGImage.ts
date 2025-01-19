@@ -46,8 +46,8 @@ export const generateOGImage = async ({ post }: Params = {}) => {
   const title = post?.data?.title || "Falconiere R. Barbosa"
   const description = post?.data?.description || defaultMetaDescription.summary
   const pathImage = post?.data?.cover
-    ? `./src/data/blog/assets/images/${post?.data?.cover}`
-    : "./src/data/blog/assets/images/Astronaut-Headshot-Closeup.jpeg";
+    ? `./src/data/assets/images/${post?.data?.cover}`
+    : "./src/data/assets/images/Astronaut-Headshot-Closeup.jpeg";
 
 
   const image = await getLocalImageToBase64(pathImage);
