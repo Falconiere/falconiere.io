@@ -15,7 +15,7 @@ export const GET: APIRoute = async ({ params }) => {
 
 export const getStaticPaths = async () => {
   const posts = await getCollection("blog");
-  return posts.map((post) => ({
+  return posts.filter((post) => post.data?.cover && typeof post.data?.cover === "string" && !post.data?.cover.includes("https://")).map((post) => ({
     params: { slug: post.id },
   }));
 }
