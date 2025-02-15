@@ -1,18 +1,18 @@
 ---
-  title: Highlights of My 2024 and Exciting Goals!
-  cover: <https://prod-files-secure.s3.us-west-2.amazonaws.com/088cfbaf-eb21-48cb-b10c-f283bff6d62f/4dee7c52-c761-4724-af07-5e6ecc307a5f/Astronaut-Headshot-Closeup.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466ZLT5NJRH%2F20250215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250215T214557Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECYaCXVzLXdlc3QtMiJHMEUCID8nBBPedlYR8t8x67LYzEf8zjO6hRXdolAoDV%2FTk0MnAiEAtZfiiZyDBaG42jKz1ugW%2F8BmDM4HmigSKjnrtLBlo4kq%2FwMITxAAGgw2Mzc0MjMxODM4MDUiDH2uoUs0Ll%2FQg%2BOLbircA%2F75gVnWcx4mczWQwUy9G1UJlvUOM7ONKlbCUH9IHuHcwbnitAuRMvj%2B06lzZ%2BYS6Dcjo5wAH07lH4brn3HAywMQv5pF6xiSgHpXpkE18bYtFf0zeIzgAXjsRyzPLnI3QZc%2FPQkMYyOKd2f6EYvmqXK8eeMtCdtiNNGSLYTGOT28hCHz4DaV7iI17FA0zsdUSxmd56uEF3QjzVRPxhY2Dq5ArY6wSTcF2WJM8Je49WWyiXx9JStL3oW5kJvBM7SOmG7acux63oZ4DEfKR2S%2FkEOzXAg%2B19Nh0SlE6LeduubKcy%2B6OYWIsx%2BM%2FT7UlMsVDNIJhPCx4Bu6oT0dLqvCigyUSur%2FHD7EhVgixLJmuKLZdHaCHJV3xDRMd39vyaC6lOSVd3OLWHVhIM%2FNoOa91x1YYau6KGc%2Bu2sAPjlGfDDc%2FFkUEi2fwhQ0K1hhxLUBJSdH6V8tsRKsWmjtOIlg0wuQtiRHuTDYqNKtze%2BXrtmPsK1NaE3cwbWaQUBKE2sHXD8Ah3HbYk43mCrtv8wGq%2BRUF5uC8l935M9EmA4%2FSGFs2b3Ln%2BGVYPe5RSdKJlYlsCcMP3xiKwR6EVxDAqsd8aq2QE6e6Ftr33r35VQCccfkluqcKh8Zkn0BwrUVMImQxL0GOqUBTXA%2Bw9rGacy5ikTAL8y%2B4QyELzgeLD1sVSM8oyVsn1QqsLVPFzsi3bG02K0hq9r4%2FOKdnaO5a4Oj5kPyxW40tjDEpeNkicjduWrH1Fx%2FUmQcUe3DoQlloNKkAUa%2BHad%2BXcCOOK9EGoNOU9GNn2J%2FhCkHAYamtKwfu5w8OFzLeYmdemRm%2Bc7HNWn79ZJn1eQZRNwXvnWKafYSV93dg9OgGEAQvyuH&X-Amz-Signature=62faf5cb3c9d672fe22e2a70a9bd9b06b314750f99d0904817bc4b554f584848&X-Amz-SignedHeaders=host&x-id=GetObject>
-  coverAlt: Image Cover Looking Ahead: Highlights of My 2024 and Exciting Goals!
-  description: In 2024, I embraced fatherhood, rediscovered my passion for work, and overcame depression. I maintained a consistent gym routine, moved to a new home, and set ambitious goals for 2025, including regular blogging and monetizing projects.
-  author: Falconiere Barbosa
+  title: "Highlights of My 2024 and Exciting Goals!"
+  cover: "1837e658-41d5-8070-bf02-de0af3227203.jpg"
+  coverAlt: "Image Cover Looking Ahead: Highlights of My 2024 and Exciting Goals!"
+  description: "In 2024, I celebrated the birth of my daughter, rediscovered my passion for work, overcame depression, and maintained a consistent gym routine. I moved to a larger home and set ambitious goals for 2025, including regular blog posts, project profitability, and personal growth."
+  author: "Falconiere Barbosa"
   draft: false
-  date: 2025-01-08
+  date: "2025-01-08"
   tags:
-   - Highlights
-   - 2025
-   - goals
-   - resolutions
-   - well-being
-  createdAt: 2025-01-08
+   - "Highlights"
+   - "2025"
+   - "goals"
+   - "resolutions"
+   - "well-being"
+  createdAt: "2025-01-08"
 ---
   
 
