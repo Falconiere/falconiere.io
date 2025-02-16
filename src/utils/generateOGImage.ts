@@ -2,7 +2,6 @@
 import { defaultMetaDescription } from "@/data/site/defaultMetaDescription";
 import type { CollectionEntry } from "astro:content";
 import fs from "fs/promises";
-import path from 'path';
 import satori from "satori";
 import { html } from "satori-html";
 import sharp from "sharp";
@@ -11,25 +10,11 @@ type Params = {
   post?: CollectionEntry<"blog"> | null;
 }
 
-const getLocalImageToBase64 = async (pathImage: string) => {
+export const getLocalImageToBase64 = async (pathImage: string) => {
   const imageBuffer = await fs.readFile(pathImage);
-  let ext = path.extname(pathImage).slice(1);
-  if (ext === "jpg") {
-    ext = "jpeg";
-  }
-  if (ext === "webp") {
-    // transform the image to png
-
-    const pngImage = await sharp(imageBuffer).png().toBuffer();
-    const finalImage = Buffer.from(pngImage).toString('base64');
-    return `data:image/png;base64,${finalImage}`;
-  }
-  // transform the image to size 250x250
-  // const resizedImage = await sharp(imageBuffer).resize(250, 250).toBuffer();
-
-  // transform the image to base64
-  const finalImage = Buffer.from(imageBuffer).toString('base64');
-  return `data:image/${ext};base64,${finalImage}`;
+  const pngImage = await sharp(imageBuffer).png().toBuffer();
+  const finalImage = Buffer.from(pngImage).toString('base64');
+  return `data:image/png;base64,${finalImage}`;
 }
 
 export const generateOGImage = async ({ post }: Params = {}) => {

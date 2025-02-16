@@ -8,7 +8,7 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string(),
     author: z.string(),
-    cover: z.string().or(z.instanceof(URL)).default("Astronaut-Headshot-Closeup.jpeg"),
+    cover: z.string().or(z.instanceof(URL)).nullish().default("Astronaut-Headshot-Closeup.jpeg"),
     coverAlt: z.string(),
     date: z.coerce.date().transform((d) => format(d, 'MMMM dd, yyyy')),
     createdAt: z.coerce.string(),

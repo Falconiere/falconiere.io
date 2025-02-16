@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "format:md": "markdownlint-cli2 'src/data/blog/posts/**/*.md' --fix",
+    "build": "yarn format:md && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -23,11 +24,13 @@
     "date-fns": "^4.1.0",
     "lucide": "^0.471.0",
     "lucide-react": "^0.471.0",
+    "markdownlint-cli2": "^0.17.2",
     "mdast-util-from-markdown": "^2.0.2",
     "mdast-util-to-string": "^4.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "reading-time": "^1.5.0",
+    "remark-lint-no-multiple-toplevel-headings": "^4.0.1",
     "satori": "^0.12.1",
     "satori-html": "^0.3.2",
     "sharp": "^0.33.5",
@@ -37,5 +40,11 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.5"
+  },
+  "markdownlint-cli2": {
+    "config": {
+      "MD013": false,
+      "no-inline-html": false
+    }
   }
 }

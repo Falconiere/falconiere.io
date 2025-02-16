@@ -18,17 +18,6 @@ const post = await getEntry("blog", path);
 <html lang="en">
   <Head section="blog" />
   <Body>
-    {
-      post?.data.cover && typeof post.data.cover === "string" && (
-        <div class="max-w-4xl mx-auto p-4 md:p-6">
-          <img
-            src={post.data.cover}
-            alt={post.data.coverAlt}
-            class="w-full h-auto"
-          />
-        </div>
-      )
-    }
     <article class="max-w-4xl mx-auto p-4 md:p-6">
       <div class="flex justify-between items-center pb-4">
         <Link href="/">
@@ -46,6 +35,15 @@ const post = await getEntry("blog", path);
           {post?.data.description}
         </p>
       </header>
+      <!-- {
+        post?.data?.cover && (
+          <img
+            src={`/api/cover/${post.data.cover}.png`}
+            alt={post?.data?.coverAlt!}
+            class="w-full h-auto my-4"
+          />
+        )
+      } -->
       <div class="prose dark:prose-invert prose-lg max-w-none pb-20">
         <slot />
       </div>

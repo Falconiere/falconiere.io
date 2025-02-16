@@ -6,7 +6,6 @@ import sitemap from '@astrojs/sitemap';
 import react from '@astrojs/react';
 import { rehypeHeadingIds } from '@astrojs/markdown-remark';
 
-
 // https://astro.build/config
 export default defineConfig({
   site: 'https://falconiere.io',
@@ -14,7 +13,6 @@ export default defineConfig({
     rehypePlugins: [
       rehypeHeadingIds,
     ]
-
   },
   integrations: [
     tailwind({
