@@ -2,7 +2,7 @@
   title: "Highlights of My 2024 and Exciting Goals!"
   cover: "1837e658-41d5-8070-bf02-de0af3227203.jpg"
   coverAlt: "Image Cover Looking Ahead: Highlights of My 2024 and Exciting Goals!"
-  description: "In 2024, I celebrated the birth of my daughter, rediscovered my passion for work, overcame depression, and maintained a consistent gym routine. I moved to a larger home and set ambitious goals for 2025, including regular blog posts, project profitability, and personal growth."
+  description: "In 2024, key highlights include the birth of my daughter, rediscovering passion for work, overcoming depression, maintaining a consistent workout routine, and moving to a new home. For 2025, I aim to achieve ambitious goals like regular blogging, project profitability, and personal growth while cherishing family time."
   author: "Falconiere Barbosa"
   draft: false
   date: "2025-01-08"
