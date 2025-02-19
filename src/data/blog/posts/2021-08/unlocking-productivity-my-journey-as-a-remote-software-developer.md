@@ -18,7 +18,7 @@
   
 
 
-My name is Falconiere; I'm from Brazil and work as a software developer.
+Hi! my name is Falconiere; I'm from Brazil and work as a software developer.
 
 
 I've been working remotely for almost four years, and as a software developer, finding remote work wasn't difficult. The tech industry offers plenty of opportunities.
