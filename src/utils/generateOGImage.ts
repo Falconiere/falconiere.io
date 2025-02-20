@@ -1,7 +1,7 @@
 
 import { defaultMetaDescription } from "@/data/site/defaultMetaDescription";
 import type { CollectionEntry } from "astro:content";
-import fs from "fs/promises";
+import fs from "node:fs/promises";
 import satori from "satori";
 import { html } from "satori-html";
 import sharp from "sharp";
@@ -11,16 +11,6 @@ type Params = {
 }
 
 export const getLocalImageToBase64 = async (pathImage: string) => {
-  const isExternalImage = pathImage.includes("https");
-  if(isExternalImage) {
-    const response = await fetch(pathImage);
-    const blob = await response.blob();
-    const arrayBuffer = await blob.arrayBuffer();
-    const buffer = Buffer.from(arrayBuffer);
-    const pngImage = await sharp(buffer).png().toBuffer();
-    const finalImage = Buffer.from(pngImage).toString('base64');
-    return `data:image/png;base64,${finalImage}`;
-  }
   const imageBuffer = await fs.readFile(pathImage);
   const pngImage = await sharp(imageBuffer).png().toBuffer();
   const finalImage = Buffer.from(pngImage).toString('base64');
@@ -40,12 +30,8 @@ export const generateOGImage = async ({ post }: Params = {}) => {
 
   const title = post?.data?.title || "Falconiere R. Barbosa"
   const description = post?.data?.description || defaultMetaDescription.summary
-
-  const isCoverExternal = !!post?.data?.cover && post?.data?.cover?.includes("https");
-  const isLocalImage = !!post?.data?.cover && !isCoverExternal;
-  const pathImage = isCoverExternal
-    ? post.data.cover
-    : isLocalImage
+  
+  const pathImage =  post?.data?.cover
       ? `./src/data/assets/images/${post?.data?.cover}`
       : "./src/data/assets/images/Astronaut-Headshot-Closeup.jpeg";
 
