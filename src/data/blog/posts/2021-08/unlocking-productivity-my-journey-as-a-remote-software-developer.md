@@ -1,7 +1,7 @@
 ---
 
   title: "Unlocking Productivity: My Journey as a Remote Software Developer"
-  cover: "https://images.unsplash.com/photo-1568790309276-16462ea4161d?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb"
+  cover: "1827e658-41d5-804c-8ad9-d011915f0c14.jpg"
   coverAlt: "Image Cover Software Developer"
   description: "Trabalhar remotamente como desenvolvedor de software trouxe desafios como a procrastinação e o burnout, mas também melhorou minha situação financeira e reduziu o estresse, permitindo mais tempo para a família, exercícios e hobbies. A gestão do tempo e um espaço de trabalho dedicado são essenciais para manter a produtividade."
   author: "Falconiere Barbosa"
