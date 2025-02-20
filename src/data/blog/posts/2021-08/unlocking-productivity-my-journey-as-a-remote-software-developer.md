@@ -1,7 +1,7 @@
 ---
 
   title: "Unlocking Productivity: My Journey as a Remote Software Developer"
-  cover: 
+  cover: "https://images.unsplash.com/photo-1568790309276-16462ea4161d?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb"
   coverAlt: "Image Cover Software Developer"
   description: "Trabalhar remotamente como desenvolvedor de software trouxe desafios como a procrastinação e o burnout, mas também melhorou minha situação financeira e reduziu o estresse, permitindo mais tempo para a família, exercícios e hobbies. A gestão do tempo e um espaço de trabalho dedicado são essenciais para manter a produtividade."
   author: "Falconiere Barbosa"
@@ -32,3 +32,4 @@ Remote work has also transformed my financial situation. Working from home reduc
 While money matters, one of the best aspects of working from home is the reduced stress. You'll sleep better and have time for exercise—something I've recently started. You can spend more time with family and friends, enjoy hobbies like gaming, and focus on your well-being.
 
 Though working from home offers many advantages, it does present challenges. During the pandemic, for instance, I experienced burnout from being house-bound continuously. Still, the benefits far outweigh the drawbacks.
+
