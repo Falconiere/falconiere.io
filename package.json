@@ -2,6 +2,7 @@
   "name": "helpless-houston",
   "type": "module",
   "version": "0.0.1",
+  "license": "MIT",
   "scripts": {
     "dev": "astro dev",
     "format:md": "markdownlint-cli2 'src/data/blog/posts/**/*.md' --fix",
