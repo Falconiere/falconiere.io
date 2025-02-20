@@ -5,7 +5,6 @@ import sharp from "sharp";
 import fs from "node:fs/promises";
 export const GET: APIRoute = async ({ params }) => {
   const cover = params.cover;
-  console.info("params", cover);
   if (!cover) {
     return new Response("Cover not found", { status: 404 });
   }
@@ -21,7 +20,7 @@ export const GET: APIRoute = async ({ params }) => {
 
 export const getStaticPaths = async () => {
   const posts = await getCollection("blog");
-  return posts.filter((post) => !post.data?.cover?.includes("https")).map((post) => ({
+  return posts.map((post) => ({
     params: { cover: post.data?.cover },
   }));
 }

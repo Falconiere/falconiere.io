@@ -26,25 +26,26 @@ const post = await getEntry("blog", path);
         </Link>
         <SocialLinks />
       </div>
-      <header class="border-divider pt-10">
+      <header class="border-divider py-10 grid gap-2">
         <PostTimeInfo post={post} />
-        <h1 class="text-2xl md:text-4xl font-bold py-4">
+        <h1 class="text-2xl md:text-4xl font-bold">
           {post?.data.title}
         </h1>
-        <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400">
+        <p class="text-lg md:text-lg text-gray-600 dark:text-gray-400">
           {post?.data.description}
         </p>
+        {
+          post?.data?.cover && (
+            <img
+              src={`/api/cover/${post.data.cover}.jpg`}
+              alt={post?.data?.coverAlt!}
+              class="w-full h-auto my-4"
+            />
+          )
+        }
+      
       </header>
-      {
-        post?.data?.cover && (
-          <img
-            src={`/api/cover/${post.data.cover}.jpg`}
-            alt={post?.data?.coverAlt!}
-            class="w-full h-auto my-4"
-          />
-        )
-      }
-      <div class="prose dark:prose-invert prose-lg max-w-none pb-20">
+      <div class="prose dark:prose-invert prose-lg max-w-none pb-20 md:text-lg">
         <slot />
       </div>
       <SocialLinks />
