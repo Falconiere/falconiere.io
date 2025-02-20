@@ -37,7 +37,7 @@ const post = await getEntry("blog", path);
         {
           post?.data?.cover && (
             <img
-              src={`/api/cover/${post.data.cover}.jpg`}
+              src={`/api/cover/${post.data.cover}`}
               alt={post?.data?.coverAlt!}
               class="w-full h-auto "
             />

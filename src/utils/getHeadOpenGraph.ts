@@ -7,8 +7,9 @@ export const getHeadOpenGraph = async (slug?: string) => {
 
   const post = slug ? await getEntry("blog", slug) : undefined;
   const title = post?.data?.title ?? defaultMetaDescription.title
+  const cover = post?.data?.cover ?? "falconiere-barbosa-blog";
   const description = post?.data?.description ?? defaultMetaDescription.description;
-  const image = `https://falconiere.io${slug ? `/api/${slug}.png` : "/api/og-image.png"}`;
+  const image = `https://falconiere.io${cover ? `/api/og/${cover}` : "/api/og-image.png"}`;
   const author = post?.data?.author ?? defaultMetaDescription.author;
   const date = format(new Date(post?.data?.date ?? new Date()), "yyyy-MM-dd");
   const tags = post?.data?.tags?.join(", ") ?? "";

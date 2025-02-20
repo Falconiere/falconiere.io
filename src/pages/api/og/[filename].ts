@@ -2,11 +2,9 @@ import { generateOGImage } from "@/utils/generateOGImage";
 import type { APIRoute } from "astro";
 import { getCollection, getEntry } from "astro:content";
 
-export const GET: APIRoute = async ({ params }) => {
-  const slug = params.slug;
-  const post = slug ? await getEntry("blog", slug) : null
-  
-  
+export const GET: APIRoute = async ({ params, props }) => {
+  const filename = params.filename;
+  const post = filename ? props.post : null
   const png = await generateOGImage({ post });
   return new Response(png, {
     headers: {
@@ -18,6 +16,9 @@ export const GET: APIRoute = async ({ params }) => {
 export const getStaticPaths = async () => {
   const posts = await getCollection("blog");
   return posts.map((post) => ({
-    params: { slug: post.id },
+    params: { filename: post.data?.cover },
+    props: {
+      post: post.data,
+    },
   }));
 }
