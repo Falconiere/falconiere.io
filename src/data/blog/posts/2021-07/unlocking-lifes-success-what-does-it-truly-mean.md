@@ -1,7 +1,7 @@
 ---
 
   title: "Unlocking Life's Success: What Does It Truly Mean?"
-  cover: "https://images.unsplash.com/photo-1492681290082-e932832941e6?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb"
+  cover: "1837e658-41d5-8028-b0bb-c2c631859e9e.jpg"
   coverAlt: "Image Cover Unlocking Life's Success: What Does It Truly Mean?"
   description: "Success is personal and not solely defined by intelligence or hard work; luck plays a significant role. It's important to create your own definition of success and not be misled by social media portrayals of happiness. Focus on your goals and recognize your unique path to fulfillment."
   author: "Falconiere Barbosa"
