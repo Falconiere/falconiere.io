@@ -38,6 +38,7 @@ const { title, description, section } = Astro.props as Props;
   <meta itemprop="name" content={title ?? meta.title} />
   <meta itemprop="description" content={description ?? meta.description} />
   <meta itemprop="image" content={meta.image} />
+  <link rel="canonical" href={meta.url} />
 
   <!-- Twitter Meta Tags -->
   <meta property="twitter:domain" content="https://falconiere.io" />
