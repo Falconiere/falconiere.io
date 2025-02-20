@@ -1,5 +1,5 @@
 export const defaultMetaDescription = {
-  title: "Falconiere R. Barbosa",
+  title: "Falconiere R. Barbosa - Insights and Reflections",
   description: `
 Explore Falconiere.io, a blog by Falconiere R. Barbosa on curiosity, growth, and insights in science, tech, philosophy, and more. Join the journey!
 `,

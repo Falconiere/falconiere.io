@@ -14,7 +14,7 @@ export const getHeadOpenGraph = async (slug?: string) => {
   const date = format(new Date(post?.data?.date ?? new Date()), "yyyy-MM-dd");
   const tags = post?.data?.tags?.join(", ") ?? "";
   const url = post ? buildPostURL(post) : "https://falconiere.io";
-  const site_name = "Falconiere Barbosa";
+  const site_name = "Falconiere R. Barbosa";
   const type = post ? "article" : "website";
   const coverAlt = post?.data?.coverAlt ?? "Falconiere Barbosa - Blog";
   const keywords = defaultMetaDescription.keywords;

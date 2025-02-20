@@ -2,7 +2,7 @@
 import "@/styles/tailwind.css";
 import type { SectionBlog } from "@/types/SectionBlog";
 import { getHeadOpenGraph } from "@/utils/getHeadOpenGraph";
-
+import { baseDomain } from "@/utils/buildPostURL";
 const params = Astro.params;
 const slug = params?.path;
 const meta = await getHeadOpenGraph(slug);
@@ -23,6 +23,7 @@ const { title, description, section } = Astro.props as Props;
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
+  <link rel="canonical" href={baseDomain} />
 
   <!-- HTML Meta Tags -->
   <meta charset="utf-8" />
@@ -33,12 +34,14 @@ const { title, description, section } = Astro.props as Props;
   <meta name="description" content={description ?? meta.description} />
   <meta name="author" content={meta.author} />
   <meta name="keywords" content={meta.keywords} />
+  <meta name="summary" content={meta.description} />
+  <meta name="publisher" content={meta.author} />
 
   <!-- Google / Search Engine Tags -->
   <meta itemprop="name" content={title ?? meta.title} />
   <meta itemprop="description" content={description ?? meta.description} />
   <meta itemprop="image" content={meta.image} />
-  <link rel="canonical" href={meta.url} />
+  
 
   <!-- Twitter Meta Tags -->
   <meta property="twitter:domain" content="https://falconiere.io" />
