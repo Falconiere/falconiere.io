@@ -31,3 +31,4 @@ Of course, that doesn’t mean you should expect good things from nowhere. So we
 In addition, we should define success ourselves. For example, I determined that I would be successful if I had enough money to stop working at age 35, which is possible. I’ll make it. We don’t need to be Bill Gates or Elon Musk. We can be just ourselves.
 
 Having someone who inspires you to succeed and be happy is good. However, we must also understand where we are and what we can do. That way, we can be less frustrated. I believe that thinking can help us achieve our goals and be successful.
+

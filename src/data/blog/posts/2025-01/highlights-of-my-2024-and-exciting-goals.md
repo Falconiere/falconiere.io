@@ -69,3 +69,4 @@ Each year, I set goals, and while I don't always achieve them all, that's okay. 
 I know these goals are ambitious, but that's what drives me toward my vision of success.
 
 I could write much more about my projects and personal life in the post, but I will do it later. If you reach out, please let me know what you think. See ya ✌
+

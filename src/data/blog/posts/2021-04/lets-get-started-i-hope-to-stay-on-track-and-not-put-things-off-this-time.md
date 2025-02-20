@@ -3,7 +3,7 @@
   title: "Let’s get started! I hope to stay on track and not put things off this time."
   cover: "1837e658-41d5-80f2-bfd8-f2cbfb74ee61.jpg"
   coverAlt: "Image cover  time art"
-  description: "At 28, the author reflects on wasted time and aims to build a business for financial freedom, starting with writing articles about software development to stay motivated and avoid procrastination."
+  description: "At 28, the author feels they've wasted their twenties but aims to start a business for financial freedom, planning to create content online, particularly about software development, to maintain motivation and avoid procrastination."
   author: "Falconiere Barbosa"
   draft: false
   date: "2021-04-04"
@@ -31,7 +31,8 @@ I will begin by writing articles as it only requires a computer with internet ac
 This is my first article here, and I would like to share my progress. It’s difficult to maintain motivation, and I believe that writing it down could enhance the likelihood of not procrastinating on my dreams. Thank you so much for reading this article.
 
 Here are my social media accounts if you'd like to follow me:
-  Twitter: [https://twitter.com/Falconiererb](https://twitter.com/Falconiererb)
+  Twitter: [https://twitter.com/Falconiererb](https://twitter.com/Falconiererb) 
   Instagram: [https://www.instagram.com/falconiererb/](https://www.instagram.com/falconiererb/)
   Linkedin: [https://www.linkedin.com/in/falconiere/](https://www.linkedin.com/in/falconiere/)
   GitHub: [https://github.com/Falconiere](https://github.com/Falconiere)
+

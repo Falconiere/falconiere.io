@@ -32,3 +32,4 @@ Remote work has also transformed my financial situation. Working from home reduc
 While money matters, one of the best aspects of working from home is the reduced stress. You'll sleep better and have time for exercise—something I've recently started. You can spend more time with family and friends, enjoy hobbies like gaming, and focus on your well-being.
 
 Though working from home offers many advantages, it does present challenges. During the pandemic, for instance, I experienced burnout from being house-bound continuously. Still, the benefits far outweigh the drawbacks.
+
