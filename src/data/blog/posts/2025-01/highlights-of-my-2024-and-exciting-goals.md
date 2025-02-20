@@ -18,7 +18,7 @@
 
   
 
-In 2024, I didn't quite achieve my New Year's resolutions like getting rich or hitting the gym (though I did work out consistently!), but I accomplished several meaningful things. Let's dive in.
+While I didn't achieve all my 2024 New Year's resolutions—like getting rich or hitting the gym daily (though I did work out consistently!)—I accomplished several meaningful things. Let's dive in.
 
 ### My daughter
 
@@ -69,3 +69,4 @@ Each year, I set goals, and while I don't always achieve them all, that's okay. 
 I know these goals are ambitious, but that's what drives me toward my vision of success.
 
 I could write much more about my projects and personal life in the post, but I will do it later. If you reach out, please let me know what you think. See ya ✌
+
