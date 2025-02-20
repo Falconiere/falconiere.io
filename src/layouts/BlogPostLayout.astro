@@ -12,6 +12,7 @@ if (path === undefined) {
   return Astro.redirect("/404");
 }
 const post = await getEntry("blog", path);
+const isCoverExternal = post?.data?.cover?.includes("https");
 ---
 
 <!doctype html>
@@ -35,15 +36,15 @@ const post = await getEntry("blog", path);
           {post?.data.description}
         </p>
       </header>
-      <!-- {
+      {
         post?.data?.cover && (
           <img
-            src={`/api/cover/${post.data.cover}.png`}
+            src={isCoverExternal ? post.data.cover : `/api/cover/${post.data.cover}.png`}
             alt={post?.data?.coverAlt!}
             class="w-full h-auto my-4"
           />
         )
-      } -->
+      }
       <div class="prose dark:prose-invert prose-lg max-w-none pb-20">
         <slot />
       </div>

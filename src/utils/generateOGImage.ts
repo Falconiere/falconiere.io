@@ -11,6 +11,16 @@ type Params = {
 }
 
 export const getLocalImageToBase64 = async (pathImage: string) => {
+  const isExternalImage = pathImage.includes("https");
+  if(isExternalImage) {
+    const response = await fetch(pathImage);
+    const blob = await response.blob();
+    const arrayBuffer = await blob.arrayBuffer();
+    const buffer = Buffer.from(arrayBuffer);
+    const pngImage = await sharp(buffer).png().toBuffer();
+    const finalImage = Buffer.from(pngImage).toString('base64');
+    return `data:image/png;base64,${finalImage}`;
+  }
   const imageBuffer = await fs.readFile(pathImage);
   const pngImage = await sharp(imageBuffer).png().toBuffer();
   const finalImage = Buffer.from(pngImage).toString('base64');
@@ -30,9 +40,14 @@ export const generateOGImage = async ({ post }: Params = {}) => {
 
   const title = post?.data?.title || "Falconiere R. Barbosa"
   const description = post?.data?.description || defaultMetaDescription.summary
-  const pathImage = post?.data?.cover
-    ? `./src/data/assets/images/${post?.data?.cover}`
-    : "./src/data/assets/images/Astronaut-Headshot-Closeup.jpeg";
+
+  const isCoverExternal = !!post?.data?.cover && post?.data?.cover?.includes("https");
+  const isLocalImage = !!post?.data?.cover && !isCoverExternal;
+  const pathImage = isCoverExternal
+    ? post.data.cover
+    : isLocalImage
+      ? `./src/data/assets/images/${post?.data?.cover}`
+      : "./src/data/assets/images/Astronaut-Headshot-Closeup.jpeg";
 
 
   const image = await getLocalImageToBase64(pathImage);
@@ -56,7 +71,7 @@ export const generateOGImage = async ({ post }: Params = {}) => {
         overflow: hidden;
       `
     )}
-    ${!isPost && (`background-color: #000;`)}
+    ${!isPost && ("background-color: #000;")}
   ">
     <div style="display: flex; padding: 40px; width: 1210px; height: 630px; box-sizing: border-box;
       justify-content: center;
@@ -69,7 +84,7 @@ export const generateOGImage = async ({ post }: Params = {}) => {
         style="width: 400px; height: 400px; border-radius: 50%;
         object-fit: cover;
         overflow: hidden;
-        ${isPost && (`display: none;`)}
+        ${isPost && ("display: none;")}
         "/>
       <div style="display: flex; flex-direction: column; justify-content: center; flex: 1; margin: auto 0;">
         <h1 style="
