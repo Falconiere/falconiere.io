@@ -71,7 +71,8 @@
   }
 
   p {
-    @apply font-poppins;
+    @apply font-inter;
+    @apply leading-7;
   }
 
   h1 {

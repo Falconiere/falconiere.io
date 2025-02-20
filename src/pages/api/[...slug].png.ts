@@ -1,7 +1,6 @@
 import { generateOGImage } from "@/utils/generateOGImage";
 import type { APIRoute } from "astro";
 import { getCollection, getEntry } from "astro:content";
-import sharp from "sharp";
 
 export const GET: APIRoute = async ({ params }) => {
   const slug = params.slug;
