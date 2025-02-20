@@ -1,4 +1,5 @@
 ---
+
   title: "Unlocking Productivity: My Journey as a Remote Software Developer"
   cover: 
   coverAlt: "Image Cover Software Developer"
@@ -15,8 +16,8 @@
    - "remote work"
   createdAt: "2021-08-25"
 ---
-  
 
+  
 
 Hi! my name is Falconiere; I'm from Brazil and work as a software developer.
 
