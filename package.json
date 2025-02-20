@@ -41,10 +41,14 @@
   "devDependencies": {
     "@types/node": "^22.10.5"
   },
-  "markdownlint-cli2": {
+ "markdownlint-cli2": {
     "config": {
       "MD013": false,
       "no-inline-html": false
-    }
+    },
+    "fix": true,
+    "gitignore": true,
+    "noProgress": false,
+    "noBanner": true
   }
 }
