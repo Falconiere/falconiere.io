@@ -1,10 +1,9 @@
 ---
-
   title: "Unlocking Productivity: My Journey as a Remote Software Developer"
   cover: "1827e658-41d5-804c-8ad9-d011915f0c14.jpg"
   coverAlt: "Image Cover Software Developer"
-  description: "Remote work as a software developer offers flexibility and financial benefits, but requires effective time management to avoid burnout. A dedicated workspace and routine help maintain productivity, while reduced expenses and stress improve overall well-being."
-  author: "Falconiere Barbosa"
+  description: "Remote dev work offers flexibility and financial perks but requires time management. A routine and workspace boost productivity, while lower costs reduce stress."
+  author: "Falconiere R. Barbosa"
   draft: false
   date: "2021-08-25"
   tags:
@@ -16,8 +15,8 @@
    - "remote work"
   createdAt: "2021-08-25"
 ---
-
   
+
 
 Hi! my name is Falconiere; I'm from Brazil and work as a software developer.
 
@@ -32,4 +31,3 @@ Remote work has also transformed my financial situation. Working from home reduc
 While money matters, one of the best aspects of working from home is the reduced stress. You'll sleep better and have time for exercise—something I've recently started. You can spend more time with family and friends, enjoy hobbies like gaming, and focus on your well-being.
 
 Though working from home offers many advantages, it does present challenges. During the pandemic, for instance, I experienced burnout from being house-bound continuously. Still, the benefits far outweigh the drawbacks.
-
