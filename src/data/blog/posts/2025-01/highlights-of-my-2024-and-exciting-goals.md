@@ -1,9 +1,8 @@
 ---
-
   title: "Highlights of My 2024 and Exciting Goals!"
   cover: "1837e658-41d5-8070-bf02-de0af3227203.jpg"
   coverAlt: "Image Cover Looking Ahead: Highlights of My 2024 and Exciting Goals!"
-  description: "In 2024, I embraced fatherhood, rediscovered my passion for work, overcame depression, and maintained a consistent gym routine. I moved to a new home and set ambitious goals for 2025, including regular blog posts, project profitability, and personal growth."
+  description: "In 2024, I became a father, rediscovered my passion for work, overcame depression, stayed consistent at the gym, moved to a new home, and set big goals for 2025."
   author: "Falconiere Barbosa"
   draft: false
   date: "2025-01-08"
@@ -15,8 +14,8 @@
    - "well-being"
   createdAt: "2025-01-08"
 ---
-
   
+
 
 While I didn't achieve all my 2024 New Year's resolutions—like getting rich or hitting the gym daily (though I did work out consistently!)—I accomplished several meaningful things. Let's dive in.
 
@@ -69,4 +68,3 @@ Each year, I set goals, and while I don't always achieve them all, that's okay. 
 I know these goals are ambitious, but that's what drives me toward my vision of success.
 
 I could write much more about my projects and personal life in the post, but I will do it later. If you reach out, please let me know what you think. See ya ✌
-
