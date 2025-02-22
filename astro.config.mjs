@@ -10,6 +10,9 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
 	site: "https://falconiere.io",
 	trailingSlash: "never",
+	build: {
+		format: "file",
+	},
 	markdown: {
 		rehypePlugins: [rehypeHeadingIds],
 	},
