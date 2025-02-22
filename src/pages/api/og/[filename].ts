@@ -18,7 +18,7 @@ export const getStaticPaths = async () => {
 	return posts.map((post) => ({
 		params: { filename: post.data?.cover },
 		props: {
-			post: post.data,
+			post: post,
 		},
 	}));
 };
