@@ -1,10 +1,9 @@
 ---
-
   title: "Let’s get started! I hope to stay on track and not put things off this time."
   cover: "1837e658-41d5-80f2-bfd8-f2cbfb74ee61.jpg"
   coverAlt: "Image cover  time art"
-  description: "At 28, the author feels they've wasted their twenties but aims to start a business for financial freedom, planning to create content online, particularly about software development, to maintain motivation and avoid procrastination."
-  author: "Falconiere Barbosa"
+  description: "At 28, I  feel  I wasted my twenties but now i plan to start a business, create content on software development, and stay motivated."
+  author: "Falconiere R. Barbosa"
   draft: false
   date: "2021-04-04"
   tags:
@@ -15,8 +14,8 @@
    - "Finance"
   createdAt: "2021-04-04"
 ---
-
   
+
 
 Did you imagine how to build your own business? I always do. The reason most of the time is financial freedom. Currently, I work for more or less 12 hours per day. I calculated that I could retire before my 40s with this number of hours.
 
@@ -31,8 +30,11 @@ I will begin by writing articles as it only requires a computer with internet ac
 This is my first article here, and I would like to share my progress. It’s difficult to maintain motivation, and I believe that writing it down could enhance the likelihood of not procrastinating on my dreams. Thank you so much for reading this article.
 
 Here are my social media accounts if you'd like to follow me:
-  Twitter: [https://twitter.com/Falconiererb](https://twitter.com/Falconiererb) 
-  Instagram: [https://www.instagram.com/falconiererb/](https://www.instagram.com/falconiererb/)
-  Linkedin: [https://www.linkedin.com/in/falconiere/](https://www.linkedin.com/in/falconiere/)
-  GitHub: [https://github.com/Falconiere](https://github.com/Falconiere)
 
+Twitter: [https://twitter.com/Falconiererb](https://twitter.com/Falconiererb)
+
+Instagram: [https://www.instagram.com/falconiererb/](https://www.instagram.com/falconiererb/)
+
+Linkedin: [https://www.linkedin.com/in/falconiere/](https://www.linkedin.com/in/falconiere/)
+
+GitHub: [https://github.com/Falconiere](https://github.com/Falconiere)
