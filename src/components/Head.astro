@@ -23,7 +23,7 @@ const { title, description, section } = Astro.props as Props;
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
-  <link rel="canonical" href={meta.url} />
+  <link rel="canonical" href={`${meta.canonicalUrl}/`} />
 
   <!-- HTML Meta Tags -->
   <meta charset="utf-8" />
