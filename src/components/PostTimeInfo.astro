@@ -1,9 +1,9 @@
 ---
-import { getReadingTime } from "@/utils/readingTime";
 import type { CollectionEntry } from "astro:content";
+import { getReadingTime } from "@/utils/readingTime";
 
 interface PostTimeInfoProps {
-  post: CollectionEntry<"blog">;
+	post: CollectionEntry<"blog">;
 }
 
 const { post } = Astro.props as PostTimeInfoProps;

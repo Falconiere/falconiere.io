@@ -1,15 +1,15 @@
 ---
 import "@/styles/tailwind.css";
+import { getEntry } from "astro:content";
 import Body from "@/components/Body.astro";
 import Head from "@/components/Head.astro";
-import PostComments from "@/components/PostComments.astro";
-import { getEntry } from "astro:content";
-import SocialLinks from "@/components/SocialLinks.astro";
-import PostTimeInfo from "@/components/PostTimeInfo.astro";
 import Link from "@/components/Link.astro";
+import PostComments from "@/components/PostComments.astro";
+import PostTimeInfo from "@/components/PostTimeInfo.astro";
+import SocialLinks from "@/components/SocialLinks.astro";
 const { path } = Astro.params;
 if (path === undefined) {
-  return Astro.redirect("/404");
+	return Astro.redirect("/404");
 }
 const post = await getEntry("blog", path);
 ---

@@ -1,27 +1,25 @@
+import { rehypeHeadingIds } from "@astrojs/markdown-remark";
+import mdx from "@astrojs/mdx";
+import react from "@astrojs/react";
+import sitemap from "@astrojs/sitemap";
+import tailwind from "@astrojs/tailwind";
 // @ts-check
-import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
-import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
-import react from '@astrojs/react';
-import { rehypeHeadingIds } from '@astrojs/markdown-remark';
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://falconiere.io',
-  markdown: {
-    rehypePlugins: [
-      rehypeHeadingIds,
-    ]
-  },
-  integrations: [
-    tailwind({
-      applyBaseStyles: false
-    }),
-    mdx({
-      optimize: true,
-    }),
-    sitemap(),
-    react()
-  ],
+	site: "https://falconiere.io",
+	markdown: {
+		rehypePlugins: [rehypeHeadingIds],
+	},
+	integrations: [
+		tailwind({
+			applyBaseStyles: false,
+		}),
+		mdx({
+			optimize: true,
+		}),
+		sitemap(),
+		react(),
+	],
 });

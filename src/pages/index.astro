@@ -1,10 +1,11 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
 import { getCollection } from "astro:content";
-import NewsLetterForm from "@/components/NewsLetterForm.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+
+import NewsLetterForm from "@/components/NewsLetterForm";
 import PostTimeInfo from "@/components/PostTimeInfo.astro";
-import { sortByDate } from "@/utils/sortByDate";
 import { mapBlogCollection } from "@/utils/mapBlogCollection";
+import { sortByDate } from "@/utils/sortByDate";
 
 const data = await getCollection("blog", ({ data }) => {
 	return data.draft !== true;
@@ -36,6 +37,8 @@ const posts = data.map(mapBlogCollection).sort(sortByDate);
 				))
 			}
 		</div>
-		<NewsLetterForm />
+		<div class="pt-10 border-t border-divider">
+			<NewsLetterForm client:load />
+		</div>
 	</main>
 </MainLayout>

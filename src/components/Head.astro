@@ -1,16 +1,16 @@
 ---
 import "@/styles/tailwind.css";
 import type { SectionBlog } from "@/types/SectionBlog";
-import { getHeadOpenGraph } from "@/utils/getHeadOpenGraph";
 import { baseDomain } from "@/utils/buildPostURL";
+import { getHeadOpenGraph } from "@/utils/getHeadOpenGraph";
 const params = Astro.params;
 const slug = params?.path;
 const meta = await getHeadOpenGraph(slug);
 
 interface Props {
-  title?: string;
-  description?: string;
-  section: SectionBlog;
+	title?: string;
+	description?: string;
+	section: SectionBlog;
 }
 const { title, description, section } = Astro.props as Props;
 ---
