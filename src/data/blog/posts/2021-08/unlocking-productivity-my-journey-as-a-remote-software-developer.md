@@ -2,7 +2,7 @@
   title: "Unlocking Productivity: My Journey as a Remote Software Developer"
   cover: "1827e658-41d5-804c-8ad9-d011915f0c14.jpg"
   coverAlt: "Image Cover Software Developer"
-  description: "Remote dev work offers flexibility and financial perks but requires time management. A routine and workspace boost productivity, while lower costs reduce stress."
+  description: "Remote dev work offers flexibility and financial perks but requires time management. A routine and workspace boost productivity, while lower costs reduce stress"
   author: "Falconiere R. Barbosa"
   draft: false
   date: "2021-08-25"
