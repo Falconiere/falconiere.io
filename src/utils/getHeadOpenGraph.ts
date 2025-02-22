@@ -22,7 +22,7 @@ export const getHeadOpenGraph = async (slug?: string) => {
 	const section = slug ? "blog" : "home";
 
 	return {
-		title: slug ? `${title} - Insights by Falconiere R. Barbosa` : title,
+		title: slug ? `${title} - by Falconiere R. Barbosa` : title,
 		description,
 		image,
 		author,
