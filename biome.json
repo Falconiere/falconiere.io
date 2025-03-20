@@ -9,9 +9,6 @@
 			"recommended": true
 		}
 	},
-	"formatter": {
-		"ignore": ["node_modules", "dist"]
-	},
 	"overrides": [
 		{
 			"include": ["*.astro"],
