@@ -4,15 +4,54 @@ import BlogPostLayout from "@/layouts/BlogPostLayout.astro";
 import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
-	const posts = await getCollection("blog");
-	return posts.map((post) => ({
-		params: { path: post.id },
-		props: { post },
-	}));
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { path: post.id },
+    props: { post },
+  }));
 }
 
 const { post } = Astro.props;
-const { Content } = await render(post);
+// Replace an Obsidian-style embed token, optionally wrapped by any single HTML tag,
+// with an <img> pointing to local assets. If wrapped and the token is the only
+// content (aside from whitespace), the wrapper tag is removed too.
+// Examples matched:
+// - <p>![[astronaut-headshot-closeup.jpeg]]</p>
+// - ![[astronaut-headshot-closeup.jpeg]]
+// The image name is captured as a named group `name` and used in the replacement.
+const embedWrappedOrBare =
+  /<([a-zA-Z][a-zA-Z0-9:-]*)(?:\s[^>]*)?>\s*!\[\[\s*(?<name>[^|\]]+?)\s*\]\]\s*<\/\1>|!\[\[\s*(?<name>[^|\]]+?)\s*\]\]/gi;
+const imageUrls = import.meta.glob(
+  "/src/data/assets/images/**/*.{png,jpg,jpeg,webp,avif,gif,svg}",
+  { eager: true, as: "url" },
+) as Record<string, string>;
+const imageUrlByName: Record<string, string> = {};
+for (const [path, url] of Object.entries(imageUrls)) {
+  const afterRoot = path.split("/src/data/assets/images/")[1] ?? path;
+  // Map by relative path (supports tokens like ![[folder/img.jpg]])
+  imageUrlByName[afterRoot] = url as string;
+  // Map by basename for convenience (tokens like ![[img.jpg]])
+  const base = afterRoot.split("/").pop() ?? "";
+  if (!(base in imageUrlByName)) imageUrlByName[base] = url as string;
+}
+const html = post.rendered?.html?.replace(
+  embedWrappedOrBare,
+  (match, ...rest) => {
+    const groups = (rest[rest.length - 1] ?? {}) as { name?: string };
+    const filename = groups.name?.trim();
+    const url = filename ? imageUrlByName[filename] : undefined;
+    return url
+      ? `<img src="${url}" alt="${post.data.coverAlt}" id="${filename}" />`
+      : match;
+  },
+);
+const { Content } = await render({
+  ...post,
+  rendered: {
+    ...post.rendered,
+    html: html ?? "",
+  },
+});
 ---
 
 <BlogPostLayout>

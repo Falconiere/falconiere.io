@@ -9,7 +9,7 @@ import PostTimeInfo from "@/components/PostTimeInfo.astro";
 import SocialLinks from "@/components/SocialLinks.astro";
 const { path } = Astro.params;
 if (path === undefined) {
-	return Astro.redirect("/404");
+  return Astro.redirect("/404");
 }
 const post = await getEntry("blog", path);
 ---
@@ -34,16 +34,6 @@ const post = await getEntry("blog", path);
         <p class="text-gray-600 dark:text-gray-400 py-4 font-poppins leading-9 text-lg">
           {post?.data.description}
         </p>
-        {
-          post?.data?.cover && (
-            <img
-              src={`/api/cover/${post.data.cover}`}
-              alt={post?.data?.coverAlt!}
-              class="w-full h-auto "
-            />
-          )
-        }
-      
       </header>
       <div class="prose dark:prose-invert max-w-none pb-20 md:text-lg prose-p:font-poppins prose-p:leading-9 prose-p:text-lg">
         <slot />
@@ -60,6 +50,5 @@ const post = await getEntry("blog", path);
       },
     });
   </script>
-
 
 </html>

@@ -1,61 +1,66 @@
 {
-	"name": "helpless-houston",
-	"type": "module",
-	"version": "0.0.1",
-	"license": "MIT",
-	"scripts": {
-		"dev": "astro dev",
-		"format:md": "markdownlint-cli2 'src/data/blog/posts/**/*.md' --fix",
-		"build": "yarn format:md && astro build",
-		"preview": "astro preview",
-		"astro": "astro",
-		"biome:check": "biome check --write ./src --unsafe",
-		"biome:format": "biome format --write ./src"
-	},
-	"dependencies": {
-		"@astrojs/mdx": "^4.0.4",
-		"@astrojs/react": "^4.1.3",
-		"@astrojs/sitemap": "^3.2.1",
-		"@astrojs/tailwind": "^5.1.4",
-		"@hookform/resolvers": "^4.1.0",
-		"@radix-ui/react-slot": "^1.1.1",
-		"@tailwindcss/typography": "^0.5.16",
-		"@types/react": "^19.0.4",
-		"@types/react-dom": "^19.0.2",
-		"astro": "^5.1.4",
-		"class-variance-authority": "^0.7.1",
-		"clsx": "^2.1.1",
-		"date-fns": "^4.1.0",
-		"lucide": "^0.471.0",
-		"lucide-react": "^0.471.0",
-		"markdownlint-cli2": "^0.17.2",
-		"mdast-util-from-markdown": "^2.0.2",
-		"mdast-util-to-string": "^4.0.0",
-		"react": "^19.0.0",
-		"react-dom": "^19.0.0",
-		"react-hook-form": "^7.54.2",
-		"reading-time": "^1.5.0",
-		"remark-lint-no-multiple-toplevel-headings": "^4.0.1",
-		"satori": "^0.12.1",
-		"satori-html": "^0.3.2",
-		"sharp": "^0.33.5",
-		"tailwind-merge": "^2.6.0",
-		"tailwindcss": "^3.4.17",
-		"tailwindcss-animate": "^1.0.7",
-		"zod": "^3.24.2"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
-		"@types/node": "^22.10.5"
-	},
-	"markdownlint-cli2": {
-		"config": {
-			"MD013": false,
-			"no-inline-html": false
-		},
-		"fix": true,
-		"gitignore": true,
-		"noProgress": false,
-		"noBanner": true
-	}
+  "name": "helpless-houston",
+  "type": "module",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "dev": "astro dev",
+    "format:md": "markdownlint-cli2 'src/data/blog/posts/**/*.md' --fix",
+    "build": "astro build yarn format:md && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "biome:check": "biome check --write ./src --unsafe",
+    "biome:format": "biome format --write ./src",
+    "deploy:prod": "CLOUDFLARE_ENV=prod yarn run build && wrangler deploy --env prod --config ./wrangler.toml"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/cloudflare": "^12.6.9",
+    "@astrojs/mdx": "4.3.6",
+    "@astrojs/react": "4.3.1",
+    "@astrojs/sitemap": "3.6.0",
+    "@astrojs/tailwind": "6.0.2",
+    "@hookform/resolvers": "^4.1.0",
+    "@radix-ui/react-slot": "^1.1.1",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/react": "^19.0.4",
+    "@types/react-dom": "^19.0.2",
+    "astro": "5.13.11",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "lucide": "^0.471.0",
+    "lucide-react": "^0.471.0",
+    "markdownlint-cli2": "^0.17.2",
+    "mdast-util-from-markdown": "^2.0.2",
+    "mdast-util-to-string": "^4.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.54.2",
+    "reading-time": "^1.5.0",
+    "remark-lint-no-multiple-toplevel-headings": "^4.0.1",
+    "satori": "^0.12.1",
+    "satori-html": "^0.3.2",
+    "sharp": "^0.33.5",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss": "^3.4.17",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.9.2",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@astrojs/upgrade": "^0.6.2",
+    "@biomejs/biome": "1.9.4",
+    "@types/node": "^22.10.5"
+  },
+  "markdownlint-cli2": {
+    "config": {
+      "MD013": false,
+      "no-inline-html": false
+    },
+    "fix": true,
+    "gitignore": true,
+    "noProgress": false,
+    "noBanner": true
+  }
 }

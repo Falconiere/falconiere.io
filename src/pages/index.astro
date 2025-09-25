@@ -2,43 +2,39 @@
 import { getCollection } from "astro:content";
 import MainLayout from "../layouts/MainLayout.astro";
 
-import NewsLetterForm from "@/components/NewsLetterForm";
 import PostTimeInfo from "@/components/PostTimeInfo.astro";
 import { mapBlogCollection } from "@/utils/mapBlogCollection";
 import { sortByDate } from "@/utils/sortByDate";
 
 const data = await getCollection("blog", ({ data }) => {
-	return data.draft !== true;
+  return data.draft !== true;
 });
 
 const posts = data.map(mapBlogCollection).sort(sortByDate);
 ---
 
 <MainLayout section="home">
-	<main class="max-w-4xl mx-auto p-6 pb-10">
-		<h1 class="text-4xl font-bold pb-2">Latest</h1>
-		<p class="text-xl max-w-2xl text-gray-30">
-			This is a collection of my latest blog posts. Enjoy! 🚀
-		</p>
-		<div class="grid pt-4">
-			{
-				posts.map((post) => (
-					<a href={post.data.url} class="border-divider group py-6">
-						<article class="group cursor-pointer flex gap-2 flex-col hover:opacity-70">
-							<PostTimeInfo post={post} />
-							<div>
-								<h2 class="text-2xl font-bold pb-1">{post.data.title}</h2>
-								<p class="text-gray-600 dark:text-gray-400 font-poppins text-lg leading-9">
-									{post.data.description}
-								</p>
-							</div>
-						</article>
-					</a>
-				))
-			}
-		</div>
-		<div class="pt-10 border-t border-divider">
-			<NewsLetterForm client:load />
-		</div>
-	</main>
+  <main class="max-w-4xl mx-auto p-6 pb-10">
+    <h1 class="text-4xl font-bold pb-2">Latest</h1>
+    <p class="text-xl max-w-2xl text-gray-30">
+      This is a collection of my latest blog posts. Enjoy! 🚀
+    </p>
+    <div class="grid pt-4">
+      {
+        posts.map((post) => (
+          <a href={post.data.url} class="border-divider group py-6">
+            <article class="group cursor-pointer flex gap-2 flex-col hover:opacity-70">
+              <PostTimeInfo post={post} />
+              <div>
+                <h2 class="text-2xl font-bold pb-1">{post.data.title}</h2>
+                <p class="text-gray-600 dark:text-gray-400 font-poppins text-lg leading-9">
+                  {post.data.description}
+                </p>
+              </div>
+            </article>
+          </a>
+        ))
+      }
+    </div>
+  </main>
 </MainLayout>
