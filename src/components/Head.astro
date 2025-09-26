@@ -1,5 +1,5 @@
 ---
-import "@/styles/tailwind.css";
+
 import type { SectionBlog } from "@/types/SectionBlog";
 import { getHeadOpenGraph } from "@/utils/getHeadOpenGraph";
 const params = Astro.params;
@@ -7,11 +7,12 @@ const slug = params?.path;
 const meta = await getHeadOpenGraph(slug);
 
 interface Props {
-	title?: string;
-	description?: string;
-	section: SectionBlog;
+  title?: string;
+  description?: string;
+  section: SectionBlog;
 }
 const { title, description, section } = Astro.props as Props;
+import stylesUrl from "../styles/tailwind.css?url";
 ---
 
 <head>
@@ -55,7 +56,7 @@ const { title, description, section } = Astro.props as Props;
 
   <!-- Facebook Meta Tags -->
   <meta property="og:title" content={title ?? meta.title} />
-  <meta property="og:logo" content="https://falconiere.io/logo.png" />
+  <meta property="og:logo" content="https://falconiere.io/images-cache/logo.13b65a8f1e.webp" />
   <meta property="og:description" content={description ?? meta.description} />
   <meta property="og:image:alt" content={meta.coverAlt} />
   <meta property="og:image:width" content="1200" />
@@ -68,15 +69,23 @@ const { title, description, section } = Astro.props as Props;
   <meta property="article:published_time" content={meta.date} />
   <meta property="article:author" content={meta.author} />
   <meta property="article:tag" content={meta.tags} />
-  <script>
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
+  <!-- Minimal critical CSS to reduce FOUC -->
+  <style>
+    
+    body {
+      background-color: hsl(var(--background));
+      color: hsl(var(--foreground));
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     }
-  </script>
+  </style>
+  <link rel="preload" href={stylesUrl} as="style" />
+  <link
+    rel="stylesheet"
+    href={stylesUrl}
+    media="all"
+  />
+  <noscript>
+    <link rel="stylesheet" href={stylesUrl} />
+  </noscript>
 </head>

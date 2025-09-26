@@ -4,18 +4,18 @@ import Head from "@/components/Head.astro";
 import type { SectionBlog } from "@/types/SectionBlog";
 
 interface Props {
-	title?: string;
-	description?: string;
-	section: SectionBlog;
+  title?: string;
+  description?: string;
+  section: SectionBlog;
 }
 
 const { title, description, section } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<Head title={title} description={description} section={section} />
-	<Body>
-		<slot />
-	</Body>
+<html lang="en" class="dark">
+  <Head title={title} description={description} section={section} />
+  <Body>
+    <slot />
+  </Body>
 </html>

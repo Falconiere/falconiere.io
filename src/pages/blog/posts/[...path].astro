@@ -1,7 +1,10 @@
 ---
 import BlogPostLayout from "@/layouts/BlogPostLayout.astro";
-
 import { getCollection, render } from "astro:content";
+import fs from "node:fs/promises";
+import path from "node:path";
+import { createHash } from "node:crypto";
+import sharp from "sharp";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -23,25 +26,110 @@ const embedWrappedOrBare =
   /<([a-zA-Z][a-zA-Z0-9:-]*)(?:\s[^>]*)?>\s*!\[\[\s*(?<name>[^|\]]+?)\s*\]\]\s*<\/\1>|!\[\[\s*(?<name>[^|\]]+?)\s*\]\]/gi;
 const imageUrls = import.meta.glob(
   "/src/data/assets/images/**/*.{png,jpg,jpeg,webp,avif,gif,svg}",
-  { eager: true, as: "url" },
+  { eager: true, query: "url", import: "default" },
 ) as Record<string, string>;
+
 const imageUrlByName: Record<string, string> = {};
-for (const [path, url] of Object.entries(imageUrls)) {
-  const afterRoot = path.split("/src/data/assets/images/")[1] ?? path;
-  // Map by relative path (supports tokens like ![[folder/img.jpg]])
+const compressedUrlByName: Record<string, string> = {};
+
+for (const [p, url] of Object.entries(imageUrls)) {
+  const afterRoot = p.split("/src/data/assets/images/")[1] ?? p;
+  // Map original asset URLs
   imageUrlByName[afterRoot] = url as string;
-  // Map by basename for convenience (tokens like ![[img.jpg]])
   const base = afterRoot.split("/").pop() ?? "";
   if (!(base in imageUrlByName)) imageUrlByName[base] = url as string;
+}
+
+// In production builds, compress once and cache under public/images-cache
+if (import.meta.env.PROD) {
+  const CACHE_DIR = path.resolve("public/images-cache");
+  await fs.mkdir(CACHE_DIR, { recursive: true });
+
+  const supported = new Set([
+    ".png",
+    ".jpg",
+    ".jpeg",
+    ".webp",
+    ".avif",
+    ".gif",
+    ".svg",
+  ]);
+
+  async function compressAndCache(absSrcPath: string): Promise<string> {
+    const ext = path.extname(absSrcPath).toLowerCase();
+    const baseNoExt = path.basename(absSrcPath, ext);
+    const buf = await fs.readFile(absSrcPath);
+    const hash = createHash("sha1").update(buf).digest("hex").slice(0, 10);
+    const outName = `${baseNoExt}.${hash}.webp`;
+    const outPath = path.join(CACHE_DIR, outName);
+    try {
+      await fs.stat(outPath);
+      return `/images-cache/${outName}`;
+    } catch (e) {
+      console.error(e);
+    }
+
+    let out = buf;
+    try {
+      if (ext === ".svg" || ext === ".gif") {
+        out = buf;
+      } else {
+        const img = sharp(buf, { animated: ext === ".gif" });
+        const pipeline = img.resize({
+          width: 1200,
+          height: 630,
+          fit: "inside",
+          withoutEnlargement: true,
+        });
+        if (ext === ".jpg" || ext === ".jpeg") {
+          out = await pipeline
+            .jpeg({ quality: 80 })
+            .toFormat("webp")
+            .toBuffer();
+        } else if (ext === ".png") {
+          out = await pipeline
+            .png({ quality: 80, compressionLevel: 8, palette: true })
+            .toFormat("webp")
+            .toBuffer();
+        } else if (ext === ".webp") {
+          out = await pipeline.webp({ quality: 80 }).toBuffer();
+        } else if (ext === ".avif") {
+          const avifQuality = Math.round(Math.min(100, Math.max(10, 80 * 0.6)));
+          out = await pipeline
+            .avif({ quality: avifQuality })
+            .toFormat("webp")
+            .toBuffer();
+        }
+        if (out.length >= buf.length) out = buf;
+      }
+    } catch {
+      out = buf;
+    }
+    buf;
+    await fs.writeFile(outPath, out);
+    return `/images-cache/${outName}`;
+  }
+
+  for (const p of Object.keys(imageUrls)) {
+    const afterRoot = p.split("/src/data/assets/images/")[1] ?? p;
+    const base = afterRoot.split("/").pop() ?? "";
+    const fsPath = path.resolve(p.startsWith("/") ? p.slice(1) : p);
+    if (!supported.has(path.extname(fsPath).toLowerCase())) continue;
+    const url = await compressAndCache(fsPath);
+    compressedUrlByName[afterRoot] = url;
+    if (!(base in compressedUrlByName)) compressedUrlByName[base] = url;
+  }
 }
 const html = post.rendered?.html?.replace(
   embedWrappedOrBare,
   (match, ...rest) => {
     const groups = (rest[rest.length - 1] ?? {}) as { name?: string };
     const filename = groups.name?.trim();
-    const url = filename ? imageUrlByName[filename] : undefined;
+    const url = filename
+      ? (compressedUrlByName[filename] ?? imageUrlByName[filename])
+      : undefined;
     return url
-      ? `<img src="${url}" alt="${post.data.coverAlt}" id="${filename}" />`
+      ? `<img src="${url}" alt="${post.data.coverAlt}" id="${filename}" class="w-full h-auto object-cover mt-0 mb-6" fetchpriority="high"/>`
       : match;
   },
 );

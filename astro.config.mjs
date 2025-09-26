@@ -26,8 +26,7 @@ export default defineConfig({
     sitemap(),
     react(),
   ],
-  image: {
-    service: passthroughImageService(),
-  },
-  adapter: cloudflare(),
+  adapter: cloudflare({
+    imageService: "cloudflare",
+  }),
 });

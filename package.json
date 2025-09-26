@@ -9,6 +9,7 @@
     "build": "astro build yarn format:md && astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "sync:obsidian": "node scripts/sync-from-obsidian.mjs",
     "biome:check": "biome check --write ./src --unsafe",
     "biome:format": "biome format --write ./src",
     "deploy:prod": "CLOUDFLARE_ENV=prod yarn run build && wrangler deploy --env prod --config ./wrangler.toml"
