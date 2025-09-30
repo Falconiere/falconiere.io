@@ -1,4 +1,3 @@
-
 ---
 title: Let's get started. I plan to avoid procrastination this time.
 cover: cover-time-art.webp
