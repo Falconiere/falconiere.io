@@ -9,10 +9,10 @@ date: 2025-8-2
 createdAt: 1759270664628
 tags:
   - AI
-  -Tech Startups
-  -Innovation
-  -Entrepreneurship
-  -Investment
+  - Tech Startups
+  - Innovation
+  - Entrepreneurship
+  - Investment
 ---
 
 ![[ai-tech-startups.jpg]]
