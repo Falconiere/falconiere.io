@@ -1,7 +1,6 @@
 import { rehypeHeadingIds } from "@astrojs/markdown-remark";
 import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
-import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 // @ts-check
 import { defineConfig } from "astro/config";
@@ -23,7 +22,6 @@ export default defineConfig({
     mdx({
       optimize: true,
     }),
-    sitemap(),
     react(),
   ],
   adapter: cloudflare({

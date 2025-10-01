@@ -10,7 +10,7 @@ const { post } = Astro.props as PostTimeInfoProps;
 ---
 
 <div class="flex items-center text-sm dark:text-gray-400 gap-2">
-  <span>{post.data.date}</span>
+  <span>{post.data.formattedDate}</span>
   <span>•</span>
   <span>{getReadingTime(post.body)}</span>
 </div>

@@ -5,13 +5,101 @@ import { getHeadOpenGraph } from "@/utils/getHeadOpenGraph";
 const params = Astro.params;
 const slug = params?.path;
 const meta = await getHeadOpenGraph(slug);
+const canonicalUrl = meta.canonicalUrl ?? Astro.url.href;
+const isArticle = meta.type === "article";
+const siteUrl = "https://falconiere.io";
+const authorUrl = `${siteUrl}/about`;
 
 interface Props {
-  title?: string;
-  description?: string;
-  section: SectionBlog;
+	title?: string;
+	description?: string;
+	section: SectionBlog;
 }
 const { title, description, section } = Astro.props as Props;
+const articleSection = isArticle ? meta.section ?? section : section;
+
+const structuredData = [
+	{
+		"@context": "https://schema.org",
+		"@type": "WebSite",
+		name: meta.site_name,
+		url: siteUrl,
+	},
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		name: meta.author,
+		url: authorUrl,
+		image: `${siteUrl}/images-cache/logo.13b65a8f1e.webp`,
+		sameAs: [
+			"https://twitter.com/falconiererb",
+			"https://github.com/falconiere",
+			"https://www.linkedin.com/in/falconiere",
+			"https://www.youtube.com/@falconiere",
+		],
+	},
+	{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		name: title ?? meta.title,
+		description: description ?? meta.description,
+		url: canonicalUrl,
+	},
+];
+
+if (isArticle) {
+	structuredData.push(
+		{
+			"@context": "https://schema.org",
+			"@type": "BlogPosting",
+			headline: meta.title,
+			description: meta.description,
+			datePublished: meta.datePublished,
+			dateModified: meta.dateModified,
+			image: meta.image,
+			...(meta.tagsList?.length
+				? { keywords: meta.tagsList.join(", "), articleSection }
+				: {}),
+			mainEntityOfPage: {
+				"@type": "WebPage",
+				"@id": canonicalUrl,
+			},
+			author: {
+				"@type": "Person",
+				name: meta.author,
+				url: authorUrl,
+			},
+			publisher: {
+				"@type": "Person",
+				name: meta.author,
+				logo: {
+					"@type": "ImageObject",
+					url: `${siteUrl}/images-cache/logo.13b65a8f1e.webp`,
+				},
+			},
+		},
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			itemListElement: [
+				{
+					"@type": "ListItem",
+					position: 1,
+					name: "Home",
+					item: siteUrl,
+				},
+				{
+					"@type": "ListItem",
+					position: 2,
+					name: meta.title,
+					item: canonicalUrl,
+				},
+			],
+		},
+	);
+}
+
+const structuredDataJson = JSON.stringify(structuredData, null, 2);
 import stylesUrl from "../styles/tailwind.css?url";
 ---
 
@@ -23,31 +111,29 @@ import stylesUrl from "../styles/tailwind.css?url";
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
-  <link rel="canonical" href={Astro.url.href} />
+  <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Falconiere Barbosa - RSS" />
+  <link rel="canonical" href={canonicalUrl} />
 
   <!-- HTML Meta Tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta property="og:image" content={meta.image} />
+  <meta name="robots" content={meta.robots} />
 
   <meta name="title" content={title ?? meta.title} />
   <meta name="description" content={description ?? meta.description} />
   <meta name="author" content={meta.author} />
   <meta name="keywords" content={meta.keywords} />
-  <meta name="summary" content={meta.description} />
   <meta name="publisher" content={meta.author} />
 
   <!-- Google / Search Engine Tags -->
   <meta itemprop="name" content={title ?? meta.title} />
   <meta itemprop="description" content={description ?? meta.description} />
   <meta itemprop="image" content={meta.image} />
-  <meta name="robots" content="all">
-  <meta name="googlebot" content="all">
-  <meta name="google" content="all">
 
   <!-- Twitter Meta Tags -->
   <meta property="twitter:domain" content="https://falconiere.io" />
   <meta property="twitter:image" content={meta.image} />
+  <meta name="twitter:image:alt" content={meta.coverAlt} />
   <meta name="twitter:title" content={title ?? meta.title} />
   <meta name="twitter:description" content={description ?? meta.description} />
   <meta name="twitter:card" content="summary_large_image" />
@@ -55,20 +141,29 @@ import stylesUrl from "../styles/tailwind.css?url";
   <meta name="twitter:creator" content="@falconiererb" />
 
   <!-- Facebook Meta Tags -->
+  <meta property="og:type" content={meta.type} />
   <meta property="og:title" content={title ?? meta.title} />
   <meta property="og:logo" content="https://falconiere.io/images-cache/logo.13b65a8f1e.webp" />
   <meta property="og:description" content={description ?? meta.description} />
+  <meta property="og:image" content={meta.image} />
+  <meta property="og:image:secure_url" content={meta.image} />
   <meta property="og:image:alt" content={meta.coverAlt} />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:type" content={meta.type} />
   <meta property="og:url" content={meta.url} />
   <meta property="og:site_name" content={meta.site_name} />
   <meta property="og:locale" content="en_US" />
-  <meta property="article:section" content={section} />
-  <meta property="article:published_time" content={meta.date} />
-  <meta property="article:author" content={meta.author} />
-  <meta property="article:tag" content={meta.tags} />
+  {isArticle && (
+    <>
+      <meta property="article:section" content={articleSection} />
+      <meta property="article:published_time" content={meta.datePublished} />
+      <meta property="article:modified_time" content={meta.dateModified} />
+      <meta property="og:updated_time" content={meta.dateModified} />
+      <meta property="article:author" content={meta.author} />
+      {meta.tags && <meta property="article:tag" content={meta.tags} />}
+    </>
+  )}
+  <script type="application/ld+json" set:html={structuredDataJson} />
   <!-- Minimal critical CSS to reduce FOUC -->
   <style>
     

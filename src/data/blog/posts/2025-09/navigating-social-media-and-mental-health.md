@@ -4,8 +4,8 @@ cover: social-media-mental-health.jpg
 coverAlt: A serene image of a person relaxing away from digital devices
 description: Explore practical steps to balance social media use and maintain mental well-being. Insights backed by recent research.
 author: Falconiere Barbosa
-draft: true
-date: 2025-9-3
+draft: false
+date: 2025-10-01
 createdAt: 1759287314284
 tags:
   - MentalHealth
