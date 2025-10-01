@@ -13,6 +13,36 @@ tags:
 createdAt: 20250112002526
 ---
 ![[beach-woman-shadow.webp]]
+---
+title: "Unlocking Life's Success: What Does It Truly Mean?"
+cover: beach-woman-shadow.webp
+coverAlt: "Image Cover Unlocking Life's Success: What Does It Truly Mean?"
+description: I wish I could be successful like everyone on Instagram, where my biggest achievement is getting out of bed before noon!
+author: Falconiere Barbosa
+draft: false
+date: 2021-12-07
+tags:
+  - success
+  - money
+  - life
+createdAt: 20250112002526
+---
+![[beach-woman-shadow.webp]]
+---
+title: "Unlocking Life's Success: What Does It Truly Mean?"
+cover: beach-woman-shadow.webp
+coverAlt: "Image Cover Unlocking Life's Success: What Does It Truly Mean?"
+description: I wish I could be successful like everyone on Instagram, where my biggest achievement is getting out of bed before noon!
+author: Falconiere Barbosa
+draft: false
+date: 2021-12-07
+tags:
+  - success
+  - money
+  - life
+createdAt: 20250112002526
+---
+![[beach-woman-shadow.webp]]
 In my mind, being successful would be like Elon Musk, one of the most influential people in the world, but that’s a stupid thought because I’ll never be like him, and that’s fine.
 
 I used to be frustrated because I felt I wasn’t smart enough to be someone like that. But I realised it’s okay to succeed in the way I can, and I know I am smart.

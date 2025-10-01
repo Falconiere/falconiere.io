@@ -1,5 +1,5 @@
 ---
-title: Highlights of My 2024 and Exciting Goals!
+title: Highlights of My 2024 and Exciting Goals for 2025!
 cover: Astronaut-Headshot-Closeup.jpeg
 coverAlt: "Image Cover Looking Ahead: Highlights of My 2024 and Exciting Goals!"
 description: 2024 proved to be a year rich with valuable experiences that contributed to my growth. Here are my highlights!
@@ -39,13 +39,12 @@ Well, 2025 is here, and I will do my best to accomplish my dreams, bring all the
 * I will build better products and help my team grow in my current role.
 * I will share more about things beyond my job. I enjoy various activities, such as playing the guitar or reading science fiction books, and I want to share that part of myself. 
 * I will write more posts for my <a href="https://falconiere.io" target="_blank">website</a>.
-* I will continue to visit the gym and strive to improve my health, both physically and mentally. 
+* I will continue to visit the gym and strive to improve my physical and mental health. 
 #### Goals
 Every year, I set goals to pursue, and most of the time, I fail to achieve some of them, which is fine. The important thing is that you never have to give up unless you have something impossible; that is obvious. So, here are my goals for 2025: 
 
 * Make a post for <a href="https://falconiere.io" target="_blank">falconiere.io</a> every two weeks.
-* Make a post for <a href="https://codafolks.com" target="_blank">codafolks.com</a>  every month.
-* Monetise my <a href="https://www.youtube.com/@falconiere" target="_blank">YouTube channel</a>.
+* Monetize my <a href="https://www.youtube.com/@falconiere" target="_blank">YouTube channel</a>.
 * Make one international travel. 
 * Buy a new house.
 

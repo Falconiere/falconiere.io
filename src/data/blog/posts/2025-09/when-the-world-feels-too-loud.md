@@ -2,7 +2,7 @@
 title: When the World Feels Too Loud
 cover: navigating-modern-life-sora.png
 coverAlt: When the World Feels Too Loud - Image by Sora
-description: "In a polarized world, I'm taking simple steps: learning, adapting, thinking for myself, and protecting my family. A small, honest plan when the world feels heavy."
+description: "In a polarised world, I'm taking simple steps: learning, adapting, thinking for myself, and protecting my family. A small, honest plan when the world feels heavy."
 author: Falconiere R. Barbosa
 draft: false
 date: 2025-09-25
