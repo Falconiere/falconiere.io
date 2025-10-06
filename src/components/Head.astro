@@ -11,92 +11,92 @@ const siteUrl = "https://falconiere.io";
 const authorUrl = `${siteUrl}/about`;
 
 interface Props {
-	title?: string;
-	description?: string;
-	section: SectionBlog;
+  title?: string;
+  description?: string;
+  section: SectionBlog;
 }
 const { title, description, section } = Astro.props as Props;
-const articleSection = isArticle ? meta.section ?? section : section;
+const articleSection = isArticle ? (meta.section ?? section) : section;
 
-const structuredData = [
-	{
-		"@context": "https://schema.org",
-		"@type": "WebSite",
-		name: meta.site_name,
-		url: siteUrl,
-	},
-	{
-		"@context": "https://schema.org",
-		"@type": "Person",
-		name: meta.author,
-		url: authorUrl,
-		image: `${siteUrl}/images-cache/logo.13b65a8f1e.webp`,
-		sameAs: [
-			"https://twitter.com/falconiererb",
-			"https://github.com/falconiere",
-			"https://www.linkedin.com/in/falconiere",
-			"https://www.youtube.com/@falconiere",
-		],
-	},
-	{
-		"@context": "https://schema.org",
-		"@type": "WebPage",
-		name: title ?? meta.title,
-		description: description ?? meta.description,
-		url: canonicalUrl,
-	},
+const structuredData: any[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: meta.site_name,
+    url: siteUrl,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: meta.author,
+    url: authorUrl,
+    image: `${siteUrl}/images-cache/logo.13b65a8f1e.webp`,
+    sameAs: [
+      "https://twitter.com/falconiererb",
+      "https://github.com/falconiere",
+      "https://www.linkedin.com/in/falconiere",
+      "https://www.youtube.com/@falconiere",
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title ?? meta.title,
+    description: description ?? meta.description,
+    url: canonicalUrl,
+  },
 ];
 
 if (isArticle) {
-	structuredData.push(
-		{
-			"@context": "https://schema.org",
-			"@type": "BlogPosting",
-			headline: meta.title,
-			description: meta.description,
-			datePublished: meta.datePublished,
-			dateModified: meta.dateModified,
-			image: meta.image,
-			...(meta.tagsList?.length
-				? { keywords: meta.tagsList.join(", "), articleSection }
-				: {}),
-			mainEntityOfPage: {
-				"@type": "WebPage",
-				"@id": canonicalUrl,
-			},
-			author: {
-				"@type": "Person",
-				name: meta.author,
-				url: authorUrl,
-			},
-			publisher: {
-				"@type": "Person",
-				name: meta.author,
-				logo: {
-					"@type": "ImageObject",
-					url: `${siteUrl}/images-cache/logo.13b65a8f1e.webp`,
-				},
-			},
-		},
-		{
-			"@context": "https://schema.org",
-			"@type": "BreadcrumbList",
-			itemListElement: [
-				{
-					"@type": "ListItem",
-					position: 1,
-					name: "Home",
-					item: siteUrl,
-				},
-				{
-					"@type": "ListItem",
-					position: 2,
-					name: meta.title,
-					item: canonicalUrl,
-				},
-			],
-		},
-	);
+  structuredData.push(
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: meta.title,
+      description: meta.description,
+      datePublished: meta.datePublished,
+      dateModified: meta.dateModified,
+      image: meta.image,
+      ...(meta.tagsList?.length
+        ? { keywords: meta.tagsList.join(", "), articleSection }
+        : {}),
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": canonicalUrl,
+      },
+      author: {
+        "@type": "Person",
+        name: meta.author,
+        url: authorUrl,
+      },
+      publisher: {
+        "@type": "Person",
+        name: meta.author,
+        logo: {
+          "@type": "ImageObject",
+          url: `${siteUrl}/images-cache/logo.13b65a8f1e.webp`,
+        },
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: siteUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: meta.title,
+          item: canonicalUrl,
+        },
+      ],
+    },
+  );
 }
 
 const structuredDataJson = JSON.stringify(structuredData, null, 2);
@@ -163,7 +163,7 @@ import stylesUrl from "../styles/tailwind.css?url";
       {meta.tags && <meta property="article:tag" content={meta.tags} />}
     </>
   )}
-  <script type="application/ld+json" set:html={structuredDataJson} />
+  <script is:inline type="application/ld+json" set:html={structuredDataJson} />
   <!-- Minimal critical CSS to reduce FOUC -->
   <style>
     
