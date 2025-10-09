@@ -1,7 +1,7 @@
 ---
 title: Perspectives Through a Limited Lens
-cover: Astronaut-Headshot-Closeup.jpeg
-coverAlt: Space poster astronaut
+cover: perspectives-through-a-limited-lens.png
+coverAlt: Perspectives Through a Limited Lens
 description: A personal reflection on failure, time, and capitalism — exploring how work, privilege, and money shape our lives, seen through the eyes of someone still trying to make sense of it all.
 author: Falconiere R. Barbosa
 draft: false
