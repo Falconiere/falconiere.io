@@ -4,27 +4,32 @@
 // their targets (your Obsidian vault paths), removes the symlink, and copies
 // the files into real directories inside the repo.
 
-import fs from "node:fs/promises";
-import fssync from "node:fs";
-import path from "node:path";
+import fs from 'node:fs/promises';
+import fssync from 'node:fs';
+import path from 'node:path';
 
 const REPO_ROOT = path.resolve(process.cwd());
 
 const TARGETS = [
-  path.join(REPO_ROOT, "src/data/assets"),
-  path.join(REPO_ROOT, "src/data/blog/posts"),
+  path.join(REPO_ROOT, 'src/data/assets'),
+  path.join(REPO_ROOT, 'src/data/blog/posts'),
 ];
 
-const DEFAULT_IGNORES = new Set([".DS_Store", ".ds_store", ".git", ".obsidian"]);
+const DEFAULT_IGNORES = new Set([
+  '.DS_Store',
+  '.ds_store',
+  '.git',
+  '.obsidian',
+]);
 
 async function readAssetIgnores(rootDir) {
-  const ignoreFile = path.join(rootDir, ".assetsignore");
+  const ignoreFile = path.join(rootDir, '.assetsignore');
   try {
-    const raw = await fs.readFile(ignoreFile, "utf8");
+    const raw = await fs.readFile(ignoreFile, 'utf8');
     const lines = raw
       .split(/\r?\n/)
-      .map((l) => l.trim())
-      .filter((l) => !!l && !l.startsWith("#"));
+      .map(l => l.trim())
+      .filter(l => !!l && !l.startsWith('#'));
     return new Set(lines);
   } catch {
     return new Set();
@@ -34,7 +39,8 @@ async function readAssetIgnores(rootDir) {
 function shouldIgnore(name, extraIgnores) {
   const lower = name.toLowerCase();
   if (DEFAULT_IGNORES.has(lower)) return true;
-  if (extraIgnores && (extraIgnores.has(name) || extraIgnores.has(lower))) return true;
+  if (extraIgnores && (extraIgnores.has(name) || extraIgnores.has(lower)))
+    return true;
   return false;
 }
 
@@ -46,13 +52,13 @@ async function emptyDir(p) {
   try {
     const entries = await fs.readdir(p, { withFileTypes: true });
     await Promise.all(
-      entries.map(async (ent) => {
+      entries.map(async ent => {
         const cur = path.join(p, ent.name);
         await fs.rm(cur, { recursive: true, force: true });
-      }),
+      })
     );
   } catch (err) {
-    if ((err?.code ?? "") !== "ENOENT") throw err;
+    if ((err?.code ?? '') !== 'ENOENT') throw err;
   }
 }
 
@@ -70,7 +76,9 @@ async function copyRecursive(src, dest, extraIgnores) {
       } else if (ent.isSymbolicLink()) {
         // Resolve and copy the contents the symlink points to
         const target = await fs.readlink(s);
-        const abs = path.isAbsolute(target) ? target : path.resolve(path.dirname(s), target);
+        const abs = path.isAbsolute(target)
+          ? target
+          : path.resolve(path.dirname(s), target);
         await copyRecursive(abs, d, extraIgnores);
       } else if (ent.isFile()) {
         await fs.copyFile(s, d);
@@ -87,7 +95,7 @@ async function migrateSymlinkFolder(repoPath) {
   let lst;
   try {
     lst = await fs.lstat(repoPath);
-  } catch (e) {
+  } catch {
     console.error(`Path not found: ${rel}`);
     return;
   }
@@ -123,8 +131,7 @@ async function main() {
   }
 }
 
-main().catch((err) => {
+main().catch(err => {
   console.error(err);
   process.exit(1);
 });
-

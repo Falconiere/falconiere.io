@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets';
 ---
 
 <nav class="border-b sticky left-0 top-0 bg-background z-10">
@@ -36,25 +36,25 @@ import { Image } from "astro:assets";
   </div>
 </nav>
 <script>
-  import { createIcons, Sun, Moon } from "lucide";
+  import { createIcons, Sun, Moon } from 'lucide';
   createIcons({
     icons: {
       Sun,
       Moon,
     },
   });
-  document.getElementById("theme-selector")?.addEventListener("click", (e) => {
+  document.getElementById('theme-selector')?.addEventListener('click', e => {
     e.preventDefault();
     const root = window.document.documentElement;
 
-    if (localStorage.theme === "dark") {
-      localStorage.theme = "light";
-      root.classList.remove("dark");
-      localStorage.setItem("theme", "light");
+    if (localStorage.theme === 'dark') {
+      localStorage.theme = 'light';
+      root.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
     } else {
-      localStorage.theme = "dark";
-      root.classList.add("dark");
-      localStorage.setItem("theme", "dark");
+      localStorage.theme = 'dark';
+      root.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
     }
   });
 </script>

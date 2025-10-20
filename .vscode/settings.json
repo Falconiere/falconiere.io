@@ -23,7 +23,5 @@
   "[astro]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
-  "cSpell.words": [
-    "trpc"
-  ],
+  "cSpell.words": ["trpc"]
 }

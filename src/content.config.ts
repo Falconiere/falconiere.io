@@ -1,11 +1,11 @@
-import { defineCollection, z } from "astro:content";
-import { glob } from "astro/loaders";
-import { format } from "date-fns";
+import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
+import { format } from 'date-fns';
 
 const blog = defineCollection({
   loader: glob({
-    pattern: "**/*.{md,mdx}",
-    base: "./src/data/blog/posts",
+    pattern: '**/*.{md,mdx}',
+    base: './src/data/blog/posts',
   }),
   schema: () =>
     z
@@ -13,7 +13,7 @@ const blog = defineCollection({
         title: z.string(),
         description: z.string(),
         author: z.string(),
-        cover: z.string().default("Astronaut-Headshot-Closeup.jpeg"),
+        cover: z.string().default('Astronaut-Headshot-Closeup.jpeg'),
         coverAlt: z.string(),
         date: z.coerce.date(),
         updatedAt: z.coerce.date().optional(),
@@ -22,9 +22,9 @@ const blog = defineCollection({
         tags: z.array(z.string()).nullable(),
         url: z.string().optional(),
       })
-      .transform((entry) => ({
+      .transform(entry => ({
         ...entry,
-        formattedDate: format(entry.date, "MMMM dd, yyyy"),
+        formattedDate: format(entry.date, 'MMMM dd, yyyy'),
       })),
 });
 

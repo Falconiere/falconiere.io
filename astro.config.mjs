@@ -1,16 +1,16 @@
-import { rehypeHeadingIds } from "@astrojs/markdown-remark";
-import mdx from "@astrojs/mdx";
-import react from "@astrojs/react";
-import tailwind from "@astrojs/tailwind";
+import { rehypeHeadingIds } from '@astrojs/markdown-remark';
+import mdx from '@astrojs/mdx';
+import react from '@astrojs/react';
+import tailwind from '@astrojs/tailwind';
 // @ts-check
-import { defineConfig } from "astro/config";
-import cloudflare from "@astrojs/cloudflare";
+import { defineConfig } from 'astro/config';
+import cloudflare from '@astrojs/cloudflare';
 // https://astro.build/config
 export default defineConfig({
-  site: "https://falconiere.io",
-  trailingSlash: "never",
+  site: 'https://falconiere.io',
+  trailingSlash: 'never',
   build: {
-    format: "file",
+    format: 'file',
   },
   markdown: {
     rehypePlugins: [rehypeHeadingIds],
@@ -25,6 +25,6 @@ export default defineConfig({
     react(),
   ],
   adapter: cloudflare({
-    imageService: "cloudflare",
+    imageService: 'cloudflare',
   }),
 });

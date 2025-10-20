@@ -1,5 +1,5 @@
 ---
-title: "Unlocking Productivity: My Journey as a Remote Software Developer"
+title: 'Unlocking Productivity: My Journey as a Remote Software Developer'
 cover: cover-software-developer.webp
 coverAlt: Image Cover Software Developer
 description: Working from home has truly transformed my life! I’ve gained extra time and a bit more money in my pocket, even if it’s not as much as I’d like 😅. It's incredible how this new setup has changed my daily routine!
@@ -15,6 +15,7 @@ tags:
   - money
   - streess-fgree
 ---
+
 ![[cover-software-developer.webp]]
 
 My name is Falconiere; I am from Brazil, and I am a software developer.  

@@ -1,16 +1,16 @@
 ---
-import { getEntry } from "astro:content";
-import Body from "@/components/Body.astro";
-import Head from "@/components/Head.astro";
-import Link from "@/components/Link.astro";
-import PostComments from "@/components/PostComments.astro";
-import PostTimeInfo from "@/components/PostTimeInfo.astro";
-import SocialLinks from "@/components/SocialLinks.astro";
+import { getEntry } from 'astro:content';
+import Body from '@/components/Body.astro';
+import Head from '@/components/Head.astro';
+import Link from '@/components/Link.astro';
+import PostComments from '@/components/PostComments.astro';
+import PostTimeInfo from '@/components/PostTimeInfo.astro';
+import SocialLinks from '@/components/SocialLinks.astro';
 const { path } = Astro.params;
 if (path === undefined) {
-  return Astro.redirect("/404");
+  return Astro.redirect('/404');
 }
-const post = await getEntry("blog", path);
+const post = await getEntry('blog', path);
 ---
 
 <!doctype html>
@@ -30,11 +30,15 @@ const post = await getEntry("blog", path);
         <h1 class="text-2xl md:text-4xl font-bold pt-4">
           {post?.data.title}
         </h1>
-        <p class="text-gray-600 dark:text-gray-400 py-4 font-poppins leading-9 text-lg">
+        <p
+          class="text-gray-600 dark:text-gray-400 py-4 font-poppins leading-9 text-lg"
+        >
           {post?.data.description}
         </p>
       </header>
-      <div class="prose dark:prose-invert max-w-none pb-20 md:text-lg prose-p:font-poppins prose-p:leading-9 prose-p:text-lg">
+      <div
+        class="prose dark:prose-invert max-w-none pb-20 md:text-lg prose-p:font-poppins prose-p:leading-9 prose-p:text-lg"
+      >
         <slot />
       </div>
       <SocialLinks />
@@ -42,12 +46,13 @@ const post = await getEntry("blog", path);
     </article>
   </Body>
   <script>
-    import { createIcons, ArrowLeft } from "lucide";
+    import { createIcons, ArrowLeft } from 'lucide';
     createIcons({
       icons: {
         ArrowLeft,
       },
     });
   </script>
+
 
 </html>

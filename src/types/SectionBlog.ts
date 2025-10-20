@@ -1,7 +1,7 @@
 export type SectionBlog =
-	| "home"
-	| "blog"
-	| "post"
-	| "about"
-	| "contact"
-	| "NotFound";
+  | 'home'
+  | 'blog'
+  | 'post'
+  | 'about'
+  | 'contact'
+  | 'NotFound';

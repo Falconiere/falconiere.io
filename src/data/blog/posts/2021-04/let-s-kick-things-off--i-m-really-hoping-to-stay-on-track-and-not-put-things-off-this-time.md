@@ -15,6 +15,7 @@ tags:
   - money
   - success
 ---
+
 ![[cover-time-art.webp]]
 
 Did you imagine how to build your own business? I always do. The reason most of the time is financial freedom. Currently, I work for more or less 12 hours per day. I calculated that I could retire before my 40s with this number of hours.

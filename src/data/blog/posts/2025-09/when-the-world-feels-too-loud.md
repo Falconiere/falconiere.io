@@ -16,6 +16,7 @@ tags:
   - love
   - world
 ---
+
 ![[navigating-modern-life-sora.png]]
 Do you ever feel the world looks good on the surface but empty inside? I do. Sometimes, the news is overwhelming. I close the tab and think, "Is this it now—anger, fear, and people not listening?"
 

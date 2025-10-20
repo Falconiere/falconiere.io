@@ -1,12 +1,12 @@
 ---
-import { getCollection } from "astro:content";
-import MainLayout from "../layouts/MainLayout.astro";
+import { getCollection } from 'astro:content';
+import MainLayout from '../layouts/MainLayout.astro';
 
-import PostTimeInfo from "@/components/PostTimeInfo.astro";
-import { mapBlogCollection } from "@/utils/mapBlogCollection";
-import { sortByDate } from "@/utils/sortByDate";
+import PostTimeInfo from '@/components/PostTimeInfo.astro';
+import { mapBlogCollection } from '@/utils/mapBlogCollection';
+import { sortByDate } from '@/utils/sortByDate';
 
-const data = await getCollection("blog", ({ data }) => {
+const data = await getCollection('blog', ({ data }) => {
   return data.draft !== true;
 });
 
@@ -21,7 +21,7 @@ const posts = data.map(mapBlogCollection).sort(sortByDate);
     </p>
     <div class="grid pt-4">
       {
-        posts.map((post) => (
+        posts.map(post => (
           <a href={post.data.url} class="border-divider group py-6">
             <article class="group cursor-pointer flex gap-2 flex-col hover:opacity-70">
               <PostTimeInfo post={post} />

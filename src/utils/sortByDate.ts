@@ -1,6 +1,6 @@
-import type { CollectionEntry } from "astro:content";
+import type { CollectionEntry } from 'astro:content';
 
-type Post = CollectionEntry<"blog">;
+type Post = CollectionEntry<'blog'>;
 
 export const sortByDate = (a: Post, b: Post) => {
   const dateA =

@@ -12,6 +12,7 @@ tags:
   - life
 createdAt: 20250112002526
 ---
+
 ![[beach-woman-shadow.webp]]
 
 In my mind, being successful would be like Elon Musk, one of the most influential people in the world, but that’s a stupid thought because I’ll never be like him, and that’s fine.

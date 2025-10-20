@@ -13,8 +13,12 @@ directory = "./dist"
 
 [env.dev]
 custom_domain = true
-route = "dev.falconiere.io/*"
+routes = [
+  { pattern = "dev.falconiere.io/*", zone_name = "falconiere.io" }
+]
 
 [env.prod]
 custom_domain = true
-route = "falconiere.io/*"
+routes = [
+  { pattern = "falconiere.io/*", zone_name = "falconiere.io" }
+]
