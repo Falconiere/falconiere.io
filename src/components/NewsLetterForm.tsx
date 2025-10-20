@@ -11,8 +11,14 @@ const schema = z.object({
 });
 
 type FormData = z.infer<typeof schema>;
-export default function NewsLetterForm() {
-  const [isSuccess, setIsSuccess] = useState(false);
+
+type StatusMessage = {
+  type: 'success' | 'error';
+  message: string;
+} | null;
+
+export default function NewsLetterForm({ formApiUrl }: { formApiUrl: string }) {
+  const [statusMessage, setStatusMessage] = useState<StatusMessage>(null);
   const form = useForm<FormData>({
     resolver: zodResolver(schema),
     defaultValues: {
@@ -22,24 +28,39 @@ export default function NewsLetterForm() {
   });
   const onSubmit = async (data: FormData) => {
     try {
-      setIsSuccess(false);
+      setStatusMessage(null);
       const payload = {
         email: data.email,
         name: data.name,
-        list_uuids: ['4126fe55-7e61-4393-a2ce-aadc4a42c4d8'],
       };
-      await fetch('https://newsletter.falconiere.io/api/public/subscription', {
+      const response = await fetch(formApiUrl, {
         method: 'POST',
         body: JSON.stringify(payload),
         headers: {
           'Content-Type': 'application/json',
         },
-      }).then(res => res.json());
-      form.reset();
-      setIsSuccess(true);
+      });
+
+      if (response.ok) {
+        form.reset();
+        setStatusMessage({
+          type: 'success',
+          message:
+            'Successfully subscribed! Check your email for confirmation.',
+        });
+      } else {
+        setStatusMessage({
+          type: 'error',
+          message: 'Something went wrong. Please try again later.',
+        });
+      }
     } catch (error) {
       // eslint-disable-next-line no-console
       console.error(error);
+      setStatusMessage({
+        type: 'error',
+        message: 'Something went wrong. Please try again later.',
+      });
     }
   };
   const {
@@ -59,8 +80,12 @@ export default function NewsLetterForm() {
         <p className="text-gray-500 dark:text-gray-400 text-[0.8em] md:text-xl">
           Subscribe to get my latest content by email.
         </p>
-        {isSuccess && (
-          <p className="text-green-500 flex pb-2">Successfully subscribed!</p>
+        {statusMessage && (
+          <p
+            className={`flex pb-2 ${statusMessage.type === 'success' ? 'text-green-500' : 'text-red-500'}`}
+          >
+            {statusMessage.message}
+          </p>
         )}
       </div>
       <div className="flex flex-col gap-2">
@@ -77,7 +102,12 @@ export default function NewsLetterForm() {
           <p className="text-red-500 flex pb-2">{errors.email.message}</p>
         )}
       </div>
-      <Button type="submit" disabled={isSuccess || form.formState.isSubmitting}>
+      <Button
+        type="submit"
+        disabled={
+          statusMessage?.type === 'success' || form.formState.isSubmitting
+        }
+      >
         {form.formState.isSubmitting ? 'Subscribing...' : 'Subscribe'}
       </Button>
       <div className="text-center pt-4 text-sm text-gray-500 dark:text-gray-400">

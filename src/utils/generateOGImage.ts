@@ -51,7 +51,7 @@ export const generateOGImage = async ({ post }: Params = {}) => {
 
   const image = await getLocalImageToBase64(pathImage);
   const logo = await getLocalImageToBase64('./src/data/assets/images/logo.png');
-  const avatar = await getLocalImageToBase64('./src/assets/avatar.png');
+  const avatar = await getLocalImageToBase64('./src/assets/avatar.jpg');
 
   const template = html` <div
     style="

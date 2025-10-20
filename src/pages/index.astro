@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import MainLayout from '../layouts/MainLayout.astro';
 
+import NewsLetterForm from '@/components/NewsLetterForm';
 import PostTimeInfo from '@/components/PostTimeInfo.astro';
 import { mapBlogCollection } from '@/utils/mapBlogCollection';
 import { sortByDate } from '@/utils/sortByDate';
@@ -11,6 +12,7 @@ const data = await getCollection('blog', ({ data }) => {
 });
 
 const posts = data.map(mapBlogCollection).sort(sortByDate);
+const formApiUrl = import.meta.env.FORM_API_URL;
 ---
 
 <MainLayout section="home">
@@ -35,6 +37,9 @@ const posts = data.map(mapBlogCollection).sort(sortByDate);
           </a>
         ))
       }
+    </div>
+    <div class="mt-12">
+      <NewsLetterForm client:load formApiUrl={formApiUrl} />
     </div>
   </main>
 </MainLayout>

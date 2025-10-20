@@ -3,6 +3,7 @@ import { getEntry } from 'astro:content';
 import Body from '@/components/Body.astro';
 import Head from '@/components/Head.astro';
 import Link from '@/components/Link.astro';
+import NewsLetterForm from '@/components/NewsLetterForm';
 import PostComments from '@/components/PostComments.astro';
 import PostTimeInfo from '@/components/PostTimeInfo.astro';
 import SocialLinks from '@/components/SocialLinks.astro';
@@ -11,6 +12,7 @@ if (path === undefined) {
   return Astro.redirect('/404');
 }
 const post = await getEntry('blog', path);
+const formApiUrl = import.meta.env.FORM_API_URL;
 ---
 
 <!doctype html>
@@ -40,6 +42,9 @@ const post = await getEntry('blog', path);
         class="prose dark:prose-invert max-w-none pb-20 md:text-lg prose-p:font-poppins prose-p:leading-9 prose-p:text-lg"
       >
         <slot />
+      </div>
+      <div class="my-12">
+        <NewsLetterForm client:load formApiUrl={formApiUrl} />
       </div>
       <SocialLinks />
       <PostComments />
