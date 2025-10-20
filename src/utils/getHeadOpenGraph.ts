@@ -36,7 +36,7 @@ export const getHeadOpenGraph = async (slug?: Slug) => {
     'index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1';
 
   return {
-    title: normalizedSlug ? `${title} - by Falconiere R. Barbosa` : title,
+    title,
     description,
     image,
     author,

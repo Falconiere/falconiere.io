@@ -32,35 +32,35 @@ export const GET: APIRoute = async ({ site }) => {
         .map(tag => `<category>${escapeXml(tag)}</category>`)
         .join('');
       return `
-				<item>
-					<title>${title}</title>
-					<link>${link}</link>
-					<guid>${link}</guid>
-					<description>${description}</description>
-					<pubDate>${formatRfc2822(post.publishedAt)}</pubDate>
-					<lastBuildDate>${formatRfc2822(post.updatedAt)}</lastBuildDate>
-					${categories}
-				</item>
-			`;
+        <item>
+          <title>${title}</title>
+          <link>${link}</link>
+          <guid>${link}</guid>
+          <description>${description}</description>
+          <pubDate>${formatRfc2822(post.publishedAt)}</pubDate>
+          <lastBuildDate>${formatRfc2822(post.updatedAt)}</lastBuildDate>
+          ${categories}
+        </item>
+      `;
     })
     .join('');
 
   const rss = `<?xml version="1.0" encoding="UTF-8" ?>
-	<rss version="2.0">
-		<channel>
-			<title>Falconiere R. Barbosa</title>
-			<link>${origin}</link>
-			<description>${escapeXml(
+  <rss version="2.0">
+    <channel>
+      <title>Falconiere R. Barbosa</title>
+      <link>${origin}</link>
+      <description>${escapeXml(
         'Insights and reflections from Falconiere R. Barbosa'
       )}</description>
-			<language>en-us</language>
-			<lastBuildDate>${formatRfc2822(
+      <language>en-us</language>
+      <lastBuildDate>${formatRfc2822(
         sorted[0]?.updatedAt ?? new Date()
       )}</lastBuildDate>
-			<ttl>180</ttl>
-			${items}
-		</channel>
-	</rss>`;
+      <ttl>180</ttl>
+      ${items}
+    </channel>
+  </rss>`;
 
   return new Response(rss, {
     headers: {

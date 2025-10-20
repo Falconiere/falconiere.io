@@ -24,7 +24,14 @@ const blog = defineCollection({
       })
       .transform(entry => ({
         ...entry,
-        formattedDate: format(entry.date, 'MMMM dd, yyyy'),
+        formattedDate: format(
+          new Date(
+            entry.date.getUTCFullYear(),
+            entry.date.getUTCMonth(),
+            entry.date.getUTCDate()
+          ),
+          'MMMM dd, yyyy'
+        ),
       })),
 });
 
